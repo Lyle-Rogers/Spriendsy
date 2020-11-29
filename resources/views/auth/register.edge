@@ -1,0 +1,72 @@
+@layout('navigation')
+
+@section('extracss')
+  {{ style('auth/register') }}
+@endsection
+
+@section('content')
+<form action="{{ route('UserController.create') }}" method="POST">
+  {{ csrfField() }}
+  
+  <label for="username">User Name</label>
+  <input 
+    class="username" 
+    type="text" 
+    name="username" 
+    value="{{ old('username', '') }}"
+  >
+  @if(hasErrorFor('username'))
+    <span>
+        {{ getErrorFor('username') }}
+    </span>
+  @endif
+
+  <label for="group_pass">Group Pass</label>
+  <input 
+    class="group_pass" 
+    type="text" 
+    name="group_pass"
+    value="{{ old('group_pass', '') }}"
+  >
+  @if(hasErrorFor('group_pass'))
+      <span>
+          {{ getErrorFor('group_pass') }}
+      </span>
+  @endif
+
+  <label for="password">Password</label>
+  <input 
+    class="password" 
+    type="password" 
+    name="password"
+    value="{{ old('password', '') }}"
+  >
+  @if(hasErrorFor('password'))
+      <span>
+          {{ getErrorFor('password') }}
+      </span>
+  @endif
+
+  <label for="password_confirmation">Confirm Password</label>
+  <input 
+    class="password_confirmation" 
+    type="password" 
+    name="password_confirmation"
+    value="{{ old('password_confirmation', '') }}"
+    >
+  @if(hasErrorFor('password_confirmation'))
+      <span>
+          {{ getErrorFor('password_confirmation') }}
+      </span>
+  @endif
+
+  <a id="login-btn" href="/login">Login</a>
+
+  <button class="register-btn" type="submit">
+    <div class="register-btn-text">
+      REGISTER
+    </div>
+    <i id="worship-icon" class="fas fa-place-of-worship"></i>
+  </button>
+</form>
+@endsection

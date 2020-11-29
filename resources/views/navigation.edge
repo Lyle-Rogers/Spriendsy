@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <script src="https://kit.fontawesome.com/7afd67fc69.js" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  
+  {{ style('navigation') }}
+
+  <title>
+    Spriendsy
+  </title>
+
+  @!section('extracss')
+</head>
+<body>
+  <header>
+    <div class="user-status-profile-btn-container">
+      <div class="user-status">
+        <div class="in-lebaron-status-wrapper">
+          <p class="in-lebaron-status">In Lebaron:</p><i class="fas fa-jedi"></i>
+        </div>
+        <div class="friendly-status-wrapper">
+          <p class="friendly-status">Friendly:</p><i class="fas fa-jedi"></i>
+        </div>
+      </div>
+      <div class="profile-settings-btn">
+        <a href="/profile-settings">
+          <i id="profile-setting-btn-svg" class="fas fa-user-edit"></i>
+        </a>
+      </div>
+    </div>
+    <div class="spriendsy-logo">
+      <h1>Spriendsy</h1>
+    </div>
+    <nav class="nav-container">
+      <a class="nav-1" href="/forum">FORUM</a>
+      <a class="nav-2" href="/friends">FRIENDS</a>
+      <a class="nav-3" href="/archive">ARCHIVE</a>
+    </nav>
+  </header> 
+  <div class="content-container">
+    @!section('content')
+  </div> 
+</body>
+</html>

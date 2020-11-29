@@ -1,0 +1,51 @@
+@layout('navigation')
+
+@section('extracss')
+  {{ style('auth/login') }}
+@endsection
+
+@section('content')
+  <div class="login-text">
+    <h6>If you want to become a Spriendsy member, forgot the group-pass, or if you</h6>
+    <h6>are havig any trouble loging in, please contact me on WhatsApp at</h6>
+    <h6>52 636 698 8561 or Facebook Messenger at <a id="facebook-contact-link" href="https://www.facebook.com/lyle.rogers.50">lyle.rogers.50</a></h6>
+  </div>
+  @if(flashMessage('loginError'))
+    <span>{{ flashMessage('loginError') }}</span>
+  @endif
+  <form class="login-form" action="{{ route('UserController.login')}}" method="POST">
+    {{ csrfField() }}
+
+    <label for="user-name">User Name</label>
+    <div class="login-user-name">
+      <input 
+        type="text" 
+        name="user-name" 
+        value="{{ old('user-name', '') }}"
+        >
+    </div>
+    @if(hasErrorFor('user-name'))
+      <span>{{ getErrorFor('user-name') }}</span>
+    @endif
+
+    <label for="password">Password</label>      
+    <div class="login-password">
+      <input 
+        type="password" 
+        name="password"
+      >
+    </div>
+    @if(hasErrorFor('password'))
+      <span>{{ getErrorFor('password') }}</span>
+    @endif
+
+    <a id="register-btn" href="/register">Register</a>
+
+    <button class="login-btn" type="submit">
+      <div class="login-btn-text">
+        LOG IN
+      </div>
+      <i id="worship-icon" class="fas fa-place-of-worship"></i>
+    </button>
+  </form>
+@endsection

@@ -1,0 +1,74 @@
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.username {
+  margin-bottom: 6px;
+  border: none;
+  border-bottom: 2px solid rgb(0, 148, 247);
+  padding-right: 2.5em;
+  padding-left: 2.5em;
+  outline: none;
+  text-align: center;
+}
+
+.group_pass {
+  margin-bottom: 6px;
+  border: none;
+  border-bottom: 2px solid rgb(0, 148, 247);
+  padding-right: 2.5em;
+  padding-left: 2.5em;
+  outline: none;
+  text-align: center;
+}
+
+.password {
+  margin-bottom: 6px;
+  border: none;
+  border-bottom: 2px solid rgb(0, 148, 247);
+  padding-right: 2.5em;
+  padding-left: 2.5em;
+  outline: none;
+  text-align: center;
+}
+
+.password_confirmation {
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid rgb(0, 148, 247);
+  padding-right: 2.5em;
+  padding-left: 2.5em;
+  outline: none;
+  text-align: center;
+}
+
+#login-btn {
+  text-decoration: none;
+  margin-bottom: 5px;
+  color: rgb(0, 153, 255);
+}
+
+.register-btn {
+  border: none;
+  outline: none;
+  height: 30px;
+  background: none;
+}
+
+.register-btn-text {
+  background-color: rgb(5, 209, 5);
+  font-family: 'Piedra', cursive;
+  font-size: 17px;
+  border-radius: 12px;
+  margin-bottom: -11px;
+  padding: 6px 9px 5px 9px;
+}
+
+#worship-icon {
+  color: rgb(5, 209, 5);
+  transform: rotate(180deg);
+  font-size: 35px;
+  margin-bottom: 15px;
+}

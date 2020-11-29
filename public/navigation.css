@@ -1,0 +1,103 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: url("../images/oueXY8.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 1px;
+  border-radius: 0px 0px 40px 40px; 
+}
+
+.user-status-profile-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-status {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Odibee Sans', cursive;
+  margin-right: 2em;
+}
+
+.in-lebaron-status-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.friendly-status-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+#profile-setting-btn-svg {
+  text-decoration: none;
+  color: #bd8100;
+  margin-left: 5em;
+  font-size: 29px;
+}
+
+.spriendsy-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-family: 'Metal Mania', cursive;
+  letter-spacing: 4px;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 19px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Piedra', cursive;
+  font-size: 22px;
+  margin-bottom: 5px; 
+}
+
+.nav-1 {
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-right: 4px;
+  border-radius: 0px 0px 0px 25px;
+  color: rgb(0, 153, 255);
+  text-decoration: none;
+  background-color: rgb(13, 22, 29);
+}
+
+.nav-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-right: 8px;
+  padding-left: 8px;
+  color: rgb(0, 153, 255);
+  text-decoration: none;
+  background-color: rgb(13, 22, 29); 
+}
+
+.nav-3 {
+  color: rgb(0, 153, 255);
+  text-decoration: none;
+  background-color: rgb(13, 22, 29);
+  padding-left: 4px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-right: 15px;
+  border-radius: 0px 0px 25px 0px;
+}
