@@ -4,6 +4,9 @@
 const Model = use('Model')
 
 class ForumMessage extends Model {
+  forumComments () {
+    return this.hasMany('App/Models/ForumComment')
+  }
 }
 
 module.exports = ForumMessage

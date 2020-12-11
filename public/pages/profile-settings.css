@@ -1,0 +1,17 @@
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-out-btn {
+  font-size: 22px;
+  margin-top: 7px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(0, 197, 0);
+  text-decoration: none;
+}
+
+#sign-out-svg {
+  margin-left: 5px;
+}

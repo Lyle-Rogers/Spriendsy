@@ -1,0 +1,48 @@
+@layout('navigation')
+
+@section('extracss')
+  {{ style('comments/forum') }}
+@endsection
+
+@section('content')
+  <div class="content">
+    <div class="forum-message-being-commented">
+      <h5>{{ messageBeingCommented.message }}</h5>
+    </div>
+    <div class="comments-container">
+      @each(comment in comments)
+        <div class="comment-container">
+          <h3 class="username">{{ comment.username }}</h3>
+          <p class="comment" readonly>{{ comment.comment }}</p>
+          @if(comment.user_id === theId)
+            <a href="{{ route('ForumCommentController.deleteComment', { id: comment.id }) }}">Delete</a>
+          @endif
+        </div>
+      @endeach
+    </div>
+    <form action="{{ route('ForumCommentController.sendComment', { id: messageBeingCommented.id }) }}" method="POST">
+      {{ csrfField() }}
+  
+      <div class="textarea-content">
+        <script>
+          function autoheight(x) {
+            x.style.height = "5px";
+            x.style.height = (15+x.scrollHeight)+"px";
+          }
+        </script>
+        @if(hasErrorFor('forum_comment_message'))
+          <span>
+            {{ getErrorFor('forum_comment_message') }}
+          </span>
+        @endif
+        <textarea 
+          id="forum-comments-textarea" 
+          name="forum_comment_message" 
+          onkeyup="autoheight(this)"
+          value="{{ old('forum_comment_message', '') }}"
+        ></textarea>
+        <button type="submit" class="send-btn">Send</button>
+      </div>
+    </form>
+  </div>
+@endsection

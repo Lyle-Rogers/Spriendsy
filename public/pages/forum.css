@@ -1,0 +1,104 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forum-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  font-family: 'Cairo', sans-serif;
+  margin-bottom: 4px;
+  line-height: 15px;
+  color: rgb(144, 0, 0);
+}
+
+.textarea-content {
+  display: flex;
+}
+
+#forum-textarea {
+  overflow: hidden;
+  height: 1.4em;
+  width: 21em;
+  outline: none;
+  border-width: 4px;
+  border-color: rgb(0, 153, 255);
+  border-radius: 10px 0px 0px 10px;
+  resize: none;
+}
+
+.send_btn_container {
+  margin-bottom: 16px;
+  margin-top: -5px;
+}
+
+.send-btn {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 31px;
+  margin-left: 1px;
+  color: rgb(0, 153, 255);
+}
+
+.username {
+  color: rgb(144, 0, 0);
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.message-container {
+  width: 19em;
+}
+
+.message {
+  text-align: center !important;
+  width: 19em;
+  color: rgb(240, 6, 6);
+  font-family: 'Cairo', sans-serif;
+  line-height: 23px;     
+}
+
+.delete-edit-comments-btns-content {
+  display: flex;
+}
+
+.delete_btn {
+  margin-right: 2.3em;
+  text-decoration: none;                color: rgb(0, 153, 255);
+  color: rgb(0, 153, 255);
+}
+
+.edit_btn {
+  margin-right: 5em;
+  text-decoration: none;                color: rgb(0, 153, 255);
+  color: rgb(0, 153, 255);
+}
+
+.comments_btn_content_2 {
+  margin-left: 13.8em;
+}
+
+.comments_btn {
+  font-family: 'Anton', sans-serif;
+  text-decoration: none;
+  margin-left: 4.6em;
+  color: rgb(0, 153, 255);
+  font-size: 15px;
+  display: flex;
+}
+
+.comments_btn_2 {
+  font-family: 'Anton', sans-serif;
+  text-decoration: none;
+  color: rgb(0, 153, 255);
+  font-size: 15px;
+}

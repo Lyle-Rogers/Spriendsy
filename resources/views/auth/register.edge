@@ -5,10 +5,19 @@
 @endsection
 
 @section('content')
+<div class="register-text">
+  <h6>If you want to become a Spriendsy member, forgot the group-pass, or if you</h6>
+  <h6>are havig any trouble loging in, please contact me on WhatsApp at</h6>
+  <h6>52 636 698 8561 or Facebook Messenger at <a id="facebook-contact-link" href="https://www.facebook.com/lyle.rogers.50">lyle.rogers.50</a></h6>
+</div>
 <form action="{{ route('UserController.create') }}" method="POST">
   {{ csrfField() }}
+
+  @if(flashMessage('message'))
+    <span class="notifications">{{ flashMessage('message')}}</span>
+  @endif
   
-  <label for="username">User Name</label>
+  <label for="username" class="labels">User Name</label>
   <input 
     class="username" 
     type="text" 
@@ -16,25 +25,25 @@
     value="{{ old('username', '') }}"
   >
   @if(hasErrorFor('username'))
-    <span>
+    <span class="input-errors">
         {{ getErrorFor('username') }}
     </span>
   @endif
 
-  <label for="group_pass">Group Pass</label>
+  <label for="group_pass" class="labels">Group Pass</label>
   <input 
     class="group_pass" 
-    type="text" 
+    type="password" 
     name="group_pass"
     value="{{ old('group_pass', '') }}"
   >
   @if(hasErrorFor('group_pass'))
-      <span>
+      <span class="input-errors">
           {{ getErrorFor('group_pass') }}
       </span>
   @endif
 
-  <label for="password">Password</label>
+  <label for="password" class="labels">Password</label>
   <input 
     class="password" 
     type="password" 
@@ -42,12 +51,12 @@
     value="{{ old('password', '') }}"
   >
   @if(hasErrorFor('password'))
-      <span>
+      <span class="input-errors">
           {{ getErrorFor('password') }}
       </span>
   @endif
 
-  <label for="password_confirmation">Confirm Password</label>
+  <label for="password_confirmation" class="labels">Confirm Password</label>
   <input 
     class="password_confirmation" 
     type="password" 
@@ -55,7 +64,7 @@
     value="{{ old('password_confirmation', '') }}"
     >
   @if(hasErrorFor('password_confirmation'))
-      <span>
+      <span class="input-errors">
           {{ getErrorFor('password_confirmation') }}
       </span>
   @endif

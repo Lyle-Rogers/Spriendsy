@@ -38,6 +38,10 @@ class User extends Model {
   forumMessages() {
     return this.hasMany('App/Models/ForumMessages')
   }
+
+  forumComments () {
+    return this.hasMany('App/Models/ForumComment')
+  }
 }
 
 module.exports = User
