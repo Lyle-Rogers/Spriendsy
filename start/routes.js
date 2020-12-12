@@ -19,6 +19,7 @@ const Route = use('Route')
 Route.on('/friends').render('pages/friends')
 Route.on('/archive').render('pages/archive')
 Route.on('/profile-settings').render('pages/profile-settings')
+Route.on('/business').render('pages/business')
 
 Route.on('/login').render('auth/login')
 Route.post('/login', 'UserController.login').validator('Login')

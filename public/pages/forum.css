@@ -2,17 +2,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.forum-text {
+.forum-text-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 15px;
+  justify-content: center;
+  line-height: 25px;
   font-family: 'Cairo', sans-serif;
-  margin-bottom: 4px;
-  line-height: 15px;
+  margin-bottom: 15px;
   color: rgb(144, 0, 0);
+  margin-left: 1em;
+}
+
+.forum_text {
+  font-size: 24px;
 }
 
 .textarea-content {
@@ -21,8 +27,8 @@
 
 #forum-textarea {
   overflow: hidden;
-  height: 1.4em;
-  width: 21em;
+  height: 3em;
+  width: 51em;
   outline: none;
   border-width: 4px;
   border-color: rgb(0, 153, 255);
@@ -39,9 +45,14 @@
   border: none;
   outline: none;
   background: none;
-  font-size: 31px;
+  font-size: 58px;
   margin-left: 1px;
   color: rgb(0, 153, 255);
+}
+
+.forum_messages_wrapper {
+  overflow-y: scroll;
+  height: 87vw; 
 }
 
 .username {
@@ -55,16 +66,13 @@
   margin-bottom: 1.5em;
 }
 
-.message-container {
-  width: 19em;
-}
-
 .message {
   text-align: center !important;
-  width: 19em;
+  width: 35em;
   color: rgb(240, 6, 6);
   font-family: 'Cairo', sans-serif;
-  line-height: 23px;     
+  line-height: 23px;  
+  font-size: 20px;   
 }
 
 .delete-edit-comments-btns-content {

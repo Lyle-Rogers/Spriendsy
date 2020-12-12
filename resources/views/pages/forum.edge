@@ -6,9 +6,9 @@
 
 @section('content')
 <div class="content">
-  <div class="forum-text">
-    <p>Please respect others point of views no matter how kinky, and let's try to keep</p>
-    <p>this public chat as full of love and light as we can get. Thank you!</p>
+  <div class="forum-text-content">
+    <div class="forum_text">Please respect others point of views no matter how kinky, and let's try to keep</div>
+    <div class="forum_text">this public chat as full of love and light as we can get. Thank you!</div>
   </div>
   <form action="{{ route('ForumMessagingController.sendMessage') }}" method="POST">
     {{ csrfField() }}
@@ -36,30 +36,32 @@
       </span>
     @endif
   </form>
-  @each(forumMessage in forumMessages)
-    <div class="message-content">
-      <div class="username">
-        <h4>{{ forumMessage.username }}</h4>
+  <div class="forum_messages_wrapper">
+    @each(forumMessage in forumMessages)
+      <div class="message-content">
+        <div class="username">
+          <h4>{{ forumMessage.username }}</h4>
+        </div>
+        <div class="message-container">
+          <p class="message">{{ forumMessage.message }}</p>
+        </div>
+        <div class="delete-edit-comments-btns-content">
+          @if(forumMessage.user_id === userId)
+            <div class="delete-edit-btns-container">
+              <a class="delete_btn" href="{{ route('ForumMessagingController.deleteForumMessage', { id: forumMessage.id }) }}"><i class="fas fa-trash"></i></a>
+              <a class="edit_btn" href="{{ route('ForumMessagingController.editForumMessage', { id: forumMessage.id }) }}"><i class="fas fa-marker"></i></a>
+            </div>
+            <div class="comments_btn_content">
+              <a class="comments_btn" href="{{ route('ForumCommentController.commentLoader', { id: forumMessage.id }) }}">Comments {{ forumMessage.comment_amount }}</a>
+            </div>
+          @else
+            <div class="comments_btn_content_2">
+              <a class="comments_btn_2" href="{{ route('ForumCommentController.commentLoader', { id: forumMessage.id }) }}">Comments {{ forumMessage.comment_amount }}</a>
+            </div>
+          @endif
+        </div>
       </div>
-      <div class="message-container">
-        <p class="message">{{ forumMessage.message }}</p>
-      </div>
-      <div class="delete-edit-comments-btns-content">
-        @if(forumMessage.user_id === userId)
-          <div class="delete-edit-btns-container">
-            <a class="delete_btn" href="{{ route('ForumMessagingController.deleteForumMessage', { id: forumMessage.id }) }}"><i class="fas fa-trash"></i></a>
-            <a class="edit_btn" href="{{ route('ForumMessagingController.editForumMessage', { id: forumMessage.id }) }}"><i class="fas fa-marker"></i></a>
-          </div>
-          <div class="comments_btn_content">
-            <a class="comments_btn" href="{{ route('ForumCommentController.commentLoader', { id: forumMessage.id }) }}">Comments {{ forumMessage.comment_amount }}</a>
-          </div>
-        @else
-          <div class="comments_btn_content_2">
-            <a class="comments_btn_2" href="{{ route('ForumCommentController.commentLoader', { id: forumMessage.id }) }}">Comments {{ forumMessage.comment_amount }}</a>
-          </div>
-        @endif
-      </div>
-    </div>
-  @endeach
+    @endeach
+  </div>
 </div>
 @endsection
