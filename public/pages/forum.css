@@ -25,7 +25,7 @@
 #forum-textarea {
   overflow: hidden;
   height: 3em;
-  width: 51em;
+  width: 42.5em;
   outline: none;
   border-width: 4px;
   border-color: rgb(0, 153, 255);
@@ -35,7 +35,7 @@
 
 .send_btn_container {
   margin-bottom: 16px;
-  margin-top: -5px;
+  margin-top: -12px;
 }
 
 .send-btn {
@@ -49,23 +49,33 @@
 
 .forum_messages_wrapper {
   overflow-y: scroll;
-  height: 87vw; 
+  height: 125vw; 
 }
 
-.username {
-  color: rgb(144, 0, 0);
-}
 
 .message-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1.5em;
+  margin-bottom: 3em;
+}
+
+.username {
+  color: rgb(144, 0, 0);
+  font-family: 'Audiowide', cursive;
+  width: 20em;
+  border: none;
+  text-align: center;
+  font-size: 26px;
+}
+
+.message_container {
+  width: 34em;
 }
 
 .message {
-  text-align: center !important;
-  width: 35em;
+  text-align: center;
+  width: 27em;
   color: rgb(240, 6, 6);
   font-family: 'Cairo', sans-serif;
   line-height: 23px;  
@@ -80,30 +90,38 @@
   margin-right: 2.3em;
   text-decoration: none;                color: rgb(0, 153, 255);
   color: rgb(0, 153, 255);
+  font-size: 25px;
+  margin-top: 6px;
+}
+
+#delete_svg {
+  margin-top: 5px;
 }
 
 .edit_btn {
   margin-right: 5em;
   text-decoration: none;                color: rgb(0, 153, 255);
   color: rgb(0, 153, 255);
+  font-size: 25px;
 }
 
 .comments_btn_content_2 {
-  margin-left: 13.8em;
+  margin-left: 25em;
 }
 
 .comments_btn {
   font-family: 'Anton', sans-serif;
   text-decoration: none;
-  margin-left: 4.6em;
+  margin-left: 6.5em;
   color: rgb(0, 153, 255);
   font-size: 15px;
   display: flex;
+  font-size: 25px;
 }
 
 .comments_btn_2 {
   font-family: 'Anton', sans-serif;
   text-decoration: none;
   color: rgb(0, 153, 255);
-  font-size: 15px;
+  font-size: 25px;
 }
