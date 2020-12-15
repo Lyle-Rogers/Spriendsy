@@ -7,9 +7,7 @@ class UserController {
   async create({ request, auth, response, session }) {
     const groupPass = request.input('group_pass');
 
-    groupPass.toLowerCase();
-
-    if(groupPass === 'star light'||'starlight'||'stare light'||'star lite'||'starlite') {
+    if(groupPass === "star light") {
       const user = await User.create(request.only(['username', 'password']));
 
       user.group_pass = true;

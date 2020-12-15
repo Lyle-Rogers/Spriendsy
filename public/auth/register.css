@@ -1,5 +1,5 @@
 .notifications {
-  font-size: 15px;
+  font-size: 23px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
@@ -7,19 +7,21 @@
   margin-top: 5px;
   margin-bottom: 5px;
   background-color: rgb(255, 217, 0);
-  max-width: 15em;
-  width: 15em;
+  max-width: 16em;
+  width: 16em;
   text-align: center;
+  font-family: 'Rubik', sans-serif;
 }
 
 .input-errors {
   font-family: 'Rubik', sans-serif;
-  font-size: 13px;
+  font-size: 21px;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 4px;
   padding-right: 4px;
-  margin-bottom: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
   background-color: rgb(255, 217, 0);
   max-width: 18em;
   width: 18em;
@@ -30,8 +32,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 15px;
+  font-size: 35px;
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 1em;
 }
 
 #facebook-contact-link {
@@ -47,58 +50,63 @@ form {
 
 .labels {
   font-family: 'Cabin', sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .username {
-  margin-bottom: 6px;
+  font-family: 'Cabin', sans-serif;
   border: none;
-  border-bottom: 2px solid rgb(0, 148, 247);
-  padding-right: 2.5em;
-  padding-left: 2.5em;
+  border-bottom: 3px solid rgb(0, 148, 247);
+  padding-right: 4em;
+  padding-left: 4em;
   outline: none;
   text-align: center;
+  font-size: 20px;
 }
 
-.group_pass {
-  margin-bottom: 6px;
+.group-pass {
   border: none;
-  border-bottom: 2px solid rgb(0, 148, 247);
-  padding-right: 2.5em;
-  padding-left: 2.5em;
+  border-bottom: 3px solid rgb(0, 148, 247);
+  padding-right: 4em;
+  padding-left: 4em;
   outline: none;
   text-align: center;
+  font-size: 20px;
 }
 
 .password {
-  margin-bottom: 6px;
   border: none;
-  border-bottom: 2px solid rgb(0, 148, 247);
-  padding-right: 2.5em;
-  padding-left: 2.5em;
+  border-bottom: 3px solid rgb(0, 148, 247);
+  padding-right: 4em;
+  padding-left: 4em;
   outline: none;
   text-align: center;
+  font-size: 20px;
 }
 
 .password_confirmation {
-  margin-bottom: 15px;
   border: none;
-  border-bottom: 2px solid rgb(0, 148, 247);
-  padding-right: 2.5em;
-  padding-left: 2.5em;
+  border-bottom: 3px solid rgb(0, 148, 247);
+  padding-right: 4em;
+  padding-left: 4em;
   outline: none;
   text-align: center;
+  font-size: 20px;
 }
 
 #login-btn {
   text-decoration: none;
   margin-bottom: 5px;
+  margin-top: 25px;
   color: rgb(0, 153, 255);
+  font-size: 22px;
 }
 
 .register-btn {
   border: none;
   outline: none;
-  height: 30px;
+  height: 25px;
   background: none;
 }
 
@@ -107,13 +115,14 @@ form {
   font-family: 'Piedra', cursive;
   font-size: 17px;
   border-radius: 12px;
-  margin-bottom: -11px;
+  margin-bottom: -10px;
   padding: 6px 9px 5px 9px;
+  font-size: 18px;
 }
 
 #worship-icon {
   color: rgb(5, 209, 5);
   transform: rotate(180deg);
-  font-size: 35px;
-  margin-bottom: 15px;
+  font-size: 34px;
+  margin-bottom: 40px;
 }
