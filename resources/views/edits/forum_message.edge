@@ -18,7 +18,9 @@
         id="forum-textarea" 
         name="forum_message" 
       >{{ theMessage.message }}</textarea>
-      <button type="submit" class="send-btn">Edit</button>
+      <div class="send_btn_container">
+        <button type="submit" class="send-btn"><i class="fas fa-share-square"></i></button>
+      </div>
     </div>
     @if(hasErrorFor('forum_message'))
       <span>
@@ -26,26 +28,32 @@
       </span>
     @endif
   </form>
-  @each(forumMessage in forumMessages)
-    <div class="message-content">
-      <div class="user-name">
-      <h4>{{ forumMessage.username }}</h4>
-      </div>
-      <div class="message-container">
-        <textarea class="message" readonly>{{ forumMessage.message }}</textarea>
-      </div>
-      <div class="delete-edit-comments-btns-content">
-        @if(forumMessage.user_id === userId)
-          <div class="delete-edit-btns-container">
-            <a href="{{ route('ForumMessagingController.deleteForumMessage', { id: forumMessage.id }) }}">Delete</a>
-            <a href="{{ route('ForumMessagingController.editForumMessage', { id: forumMessage.id }) }}">Edit</a>
-          </div>
-        @endif
-        <div class="comments-btn">
-          <a href="{{ route('ForumMessagingController.comment', { id: forumMessage.id }) }}">Comment</a>
+  <div class="forum_messages_wrapper">
+    @each(forumMessage in forumMessages)
+      <div class="message-content">
+        <div class="username">
+          <h4>{{ forumMessage.username }}</h4>
+        </div>
+        <div class="message_container">
+          <p class="message">{{ forumMessage.message }}</p>
+        </div>
+        <div class="delete-edit-comments-btns-content">
+          @if(forumMessage.user_id === userId)
+            <div class="delete-edit-btns-container">
+              <a class="delete_btn" href="{{ route('ForumMessagingController.deleteForumMessage', { id: forumMessage.id }) }}"><i id="delete_svg" class="fas fa-trash"></i></a>
+              <a class="edit_btn" href="{{ route('ForumMessagingController.editForumMessage', { id: forumMessage.id }) }}"><i id="edit_svg" class="fas fa-marker"></i></a>
+            </div>
+            <div class="comments_btn_content">
+              <a class="comments_btn" href="{{ route('ForumCommentController.commentLoader', { id: forumMessage.id }) }}">Comments {{ forumMessage.comment_amount }}</a>
+            </div>
+          @else
+            <div class="comments_btn_content_2">
+              <a class="comments_btn_2" href="{{ route('ForumCommentController.commentLoader', { id: forumMessage.id }) }}">Comments {{ forumMessage.comment_amount }}</a>
+            </div>
+          @endif
         </div>
       </div>
-    </div>
-  @endeach
+    @endeach
+  </div>
 </div>
 @endsection

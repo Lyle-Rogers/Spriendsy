@@ -4,7 +4,10 @@ const ForumMessages = use('App/Models/ForumMessages')
 
 class ForumMessagingController {
   async messagesLoader({ view, auth }) {
-    const forumMessages = await ForumMessages.all();
+    const forumMessages = await ForumMessages
+      .query()
+      .orderBy('id', '1')
+      .fetch()
 
     const userId = auth.user.id;
 

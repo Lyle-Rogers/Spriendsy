@@ -35,7 +35,6 @@
   font-size: 35px;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 1em;
-
 }
 
 #facebook-contact-link {
@@ -59,8 +58,8 @@
   font-family: 'Cabin', sans-serif;
   border: none;
   border-bottom: 3px solid rgb(0, 148, 247);
-  padding-right: 4em;
-  padding-left: 4em;
+  padding-right: 4.1em;
+  padding-left: 4.1em;
   outline: none;
   text-align: center;
   font-size: 20px;

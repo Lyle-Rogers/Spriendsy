@@ -1,9 +1,87 @@
 @layout('navigation')
 
-{{--  @section('extracss')
+@section('extracss')
   {{ style('pages/friends') }}
-@endsection  --}}
+@endsection
 
 @section('content')
-  <h1>Friends</h1>
+  <div class="content">
+    <div class="friend_messages_content">
+      @each(message in messages)
+        @if(message.user_id === userId)
+          <div class="message_from_user">
+            <p class="message">{{ message.message }}</p>
+            <a class="delete_btn" href="{{ route('FriendController.deleteMessage', { id: message.id})}}"><i id="delete_svg" class="fas fa-trash"></i></a>
+          </div>
+        @else
+          <div class="message_from_friend">
+            <p>{{ message.message }}</p>
+          </div>
+        @endif
+      @endeach
+      <div class="textarea_wrapper">
+        <form action="{{ route('FriendController.sendMessage') }}" method="POST">
+          {{ csrfField() }}
+  
+          <input type="hidden" name="user_messaged_id" value="{{ userMessagedId }}">
+      
+          @if(hasErrorFor('friend_message'))
+            <span class="textarea_error">
+              {{ getErrorFor('friend_message') }}
+            </span>
+          @endif
+          <div class="textarea_content">
+            <script>
+              function autoheight(x) {
+                x.style.height = "5px";
+                x.style.height = (15+x.scrollHeight)+"px";
+              }
+            </script>
+            <textarea 
+              id="textarea" 
+              name="friend_message" 
+              onkeyup="autoheight(this)"
+              value="{{ old('friend_message', '') }}"
+            ></textarea>
+            <div class="send_btn_container">
+              <button type="submit" class="send_btn"><i class="fas fa-share-square"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="friends_list_content">
+      @each(friend in friends)
+        <a class="friend_click" href="{{ route('FriendController.friendMessagesLoader', { id: friend.id }) }}">
+          <h3 class="username">{{ friend.username }}</h3>
+          <div class="status_content">
+            <div class="in_lebaron">
+              <h4>In Lebaron:</h4>
+              @if(friend.in_lebaron === true)
+                <div class="in_lebaron_true">
+                  <i id="in_lebaron_true_svg" class="fas fa-jedi"></i>
+                </div>
+              @else
+                <div class="in_lebaron_false">
+                  <i id="in_lebaron_false_svg" class="fas fa-jedi"></i>
+                </div>
+              @endif
+            </div>
+            <div class="friendly">
+              <h4>Friendly:</h4>
+              @if(friend.friendly === true)
+                <div class="friendly_true">
+                  <i id="friendly_true_svg" class="fas fa-jedi"></i>
+                </div>
+              @else
+                <div class="friendly_false">
+                  <i id="friendly_false_svg" class="fas fa-jedi"></i>
+                </div>
+              @endif
+            </div>
+          </div>
+        </a>
+      @endeach
+    </div>
+  </div>
 @endsection

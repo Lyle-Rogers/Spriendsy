@@ -8,13 +8,121 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 15px;
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: 4px;
+  justify-content: center;
+  line-height: 25px;
+  font-family: 'Cairo', sans-serif;
+  margin-bottom: 15px;
+  color: rgb(144, 0, 0);
+  width: 40em;
+  font-size: 23px;
+}
+
+.textarea-content {
+  display: flex;
 }
 
 #forum-textarea {
-  overflow: hidden;
-  height: 5.4em;
-  width: 19em;
+  height: 5em;
+  width: 28em;
+  outline: none;
+  border-width: 4px;
+  border-color: rgb(0, 153, 255);
+  border-radius: 27px 0px 0px 27px;
+  resize: none;
+  font-family: 'Cairo', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 19px;
+}
+
+.send_btn_container {
+  margin-bottom: 16px;
+  margin-top: -10px;
+}
+
+.send-btn {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 55px;
+  margin-left: 1px;
+  color: rgb(0, 153, 255);
+}
+
+.forum_messages_wrapper {
+  overflow-y: scroll;
+  height: 125vw; 
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.username {
+  color: rgb(144, 0, 0);
+  font-family: 'Audiowide', cursive;
+  width: 20em;
+  border: none;
+  text-align: center;
+  font-size: 26px;
+}
+
+.message_container {
+  width: 34em;
+}
+
+.message {
+  text-align: center;
+  width: 27em;
+  color: rgb(240, 6, 6);
+  font-family: 'Cairo', sans-serif;
+  line-height: 23px;  
+  font-size: 20px;   
+}
+
+.delete-edit-comments-btns-content {
+  display: flex;
+}
+
+.delete_btn {
+  margin-right: 2.3em;
+  text-decoration: none;                color: rgb(0, 153, 255);
+  color: rgb(0, 153, 255);
+  font-size: 25px;
+  margin-top: 6px;
+}
+
+#delete_svg {
+  margin-top: 5px;
+}
+
+.edit_btn {
+  margin-right: 5em;
+  text-decoration: none;                color: rgb(0, 153, 255);
+  color: rgb(0, 153, 255);
+  font-size: 25px;
+}
+
+.comments_btn_content_2 {
+  margin-left: 25em;
+}
+
+.comments_btn {
+  font-family: 'Anton', sans-serif;
+  text-decoration: none;
+  margin-left: 6.5em;
+  color: rgb(0, 153, 255);
+  font-size: 15px;
+  display: flex;
+  font-size: 25px;
+}
+
+.comments_btn_2 {
+  font-family: 'Anton', sans-serif;
+  text-decoration: none;
+  color: rgb(0, 153, 255);
+  font-size: 25px;
 }

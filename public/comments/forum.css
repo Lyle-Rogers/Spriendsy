@@ -1,8 +1,98 @@
-/* position: relative;
-position: fixed;
-bottom: 0;
-left: 0; */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.forum-message-being-commented {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 25px;
+  font-family: 'Cairo', sans-serif;
+  margin-bottom: 15px;
+  color: rgb(23, 71, 116);
+  width: 33em;
+  font-size: 27px;
+}
+
+.comments-container {
+  overflow-y: scroll;
+  height: 125vw; 
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.username {
+  color: rgb(144, 0, 0);
+  font-family: 'Audiowide', cursive;
+  width: 20em;
+  border: none;
+  text-align: center;
+  font-size: 26px;
+}
 
 .comment {
-  width: 15em;
+  text-align: center;
+  width: 27em;
+  color: rgb(240, 6, 6);
+  font-family: 'Cairo', sans-serif;
+  line-height: 23px;  
+  font-size: 20px; 
 }
+
+.delete_btn {
+  color: rgb(240, 6, 6);
+  font-size: 25px;
+  margin-top: 6px;
+}
+
+@media only screen and (max-width: 40em) {
+  .content {
+    background-color: rgb(13, 85, 109);
+  }
+}
+
+.textarea_container {
+  position: fixed;
+  bottom: 0;
+  left: 27%;
+}
+
+.textarea_wrapper {
+  display: flex;
+}
+
+#forum-comments-textarea {
+  overflow: hidden;
+  height: 2em;
+  width: 28em;
+  outline: none;
+  border-width: 4px;
+  border-color: rgb(0, 153, 255);
+  border-radius: 27px 0px 0px 27px;
+  resize: none;
+  font-family: 'Cairo', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 15px;
+  margin-top: 0.9em;
+}
+
+.send-btn {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 55px;
+  margin-left: 1px;
+  color: rgb(0, 153, 255);
+  margin-top: 8px;
+}
+

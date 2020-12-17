@@ -16,7 +16,6 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/friends').render('pages/friends')
 Route.on('/archive').render('pages/archive')
 Route.on('/profile-settings').render('pages/profile-settings')
 Route.on('/business').render('pages/business')
@@ -41,3 +40,7 @@ Route.post('/forum/forum_update/:id', 'ForumMessagingController.updateForumMessa
 Route.get('/forum_comments/:id', 'ForumCommentController.commentLoader')
 Route.post('/forum_comments/:id', 'ForumCommentController.sendComment')
 Route.get('/fourm_comments/:id', 'ForumCommentController.deleteComment')
+
+Route.get('/friends', 'FriendController.renderFriends')
+Route.get('/friends/:id', 'FriendController.friendMessagesLoader')
+Route.post('/friends', 'FriendController.sendMessage')
