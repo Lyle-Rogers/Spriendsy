@@ -4,6 +4,13 @@
   position: relative;
 }
 
+.messages_wrapper {
+  margin-top: 12px;
+  overflow-y: scroll;
+  height: 82.5em; 
+  width: 36em;
+}
+
 .message_from_user {
   display: flex;
   align-items: center;
@@ -11,9 +18,8 @@
   line-height: 25px;
   font-family: 'Cairo', sans-serif;
   margin-bottom: 15px;
-  margin-left: -17.7em;
   color: rgb(5, 209, 5);
-  width: 17em;
+  width: 24em;
   font-size: 24px;
   text-align: center;
 }
@@ -25,9 +31,9 @@
   line-height: 25px;
   font-family: 'Cairo', sans-serif;
   margin-bottom: 15px;
-  margin-left: -17.7em;
-  color: rgb(5, 209, 5);
-  width: 17em;
+  margin-left: 5.8em;
+  color: rgb(255, 0, 0);
+  width: 15.5em;
   font-size: 24px;
   text-align: center;
 }
@@ -40,29 +46,36 @@
   color: rgb(240, 6, 6);
   font-size: 25px;
   margin-top: 6px;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .textarea_content {
   display: flex;
   position: fixed;
   bottom: 0;
-  left: 23.5%;
+  left: 20.5%;
+}
+
+@media (max-width:70em) {
+  .textarea_content {
+    left: 9%;
+  }
 }
 
 #textarea {
   overflow: hidden;
-  height: 2em;
-  width: 16.5em;
+  height: 1.6em;
+  width: 14.6em;
   outline: none;
   border-width: 4px;
   border-color: rgb(0, 153, 255);
   border-radius: 27px 0px 0px 27px;
   resize: none;
   font-family: 'Cairo', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
-  line-height: 15px;
+  line-height: 26px;
+  text-justify: center;
 }
 
 .send_btn {
@@ -82,7 +95,8 @@
   width: 20em;
   margin-top: 1em;
   margin-bottom: 1em;
-  margin-right: -25.5em;
+  margin-right: 7.5em;
+  margin-left: -3.8em;
   border-left: 4px solid rgb(0, 153, 255);
   border-right: 4px solid rgb(0, 153, 255);
 }

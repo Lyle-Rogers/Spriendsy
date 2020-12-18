@@ -7,18 +7,20 @@
 @section('content')
   <div class="content">
     <div class="friend_messages_content">
-      @each(message in messages)
-        @if(message.user_id === userId)
-          <div class="message_from_user">
-            <p class="message">{{ message.message }}</p>
-            <a class="delete_btn" href="{{ route('FriendController.deleteMessage', { id: message.id})}}"><i id="delete_svg" class="fas fa-trash"></i></a>
-          </div>
-        @else
-          <div class="message_from_friend">
-            <p>{{ message.message }}</p>
-          </div>
-        @endif
-      @endeach
+      <div class="messages_wrapper">
+        @each(message in messages)
+          @if(message.user_id === userId)
+            <div class="message_from_user">
+              <p class="message">{{ message.message }}</p>
+              <a class="delete_btn" href="{{ route('FriendController.deleteMessage', { id: message.id})}}"><i id="delete_svg" class="fas fa-trash"></i></a>
+            </div>
+          @else
+            <div class="message_from_friend">
+              <p>{{ message.message }}</p>
+            </div>
+          @endif
+        @endeach
+      </div>
       <div class="textarea_wrapper">
         <form action="{{ route('FriendController.sendMessage') }}" method="POST">
           {{ csrfField() }}

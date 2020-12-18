@@ -23,10 +23,10 @@ class FriendController {
 
     const messages = await Friend
       .query()
-      .where('user_id', auth.user.id)
-      .where('user_messaged_id', params.id)
+      .where({ 'user_messaged_id': params.id, 'user_id': userId })
+      .orWhere({ 'user_messaged_id': userId, 'user_id': params.id })
       .orderBy('id', '1')
-      .fetch();
+      .fetch()
 
     return view.render('pages/friends', { friends: friends.toJSON(), userId, messages: messages.toJSON(), userMessagedId: params.id });
   }
