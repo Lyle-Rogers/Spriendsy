@@ -36,6 +36,7 @@
 .comments-container {
   overflow-y: scroll;
   height: 78em; 
+  margin-bottom: 3em;
 }
 
 .comment-container {

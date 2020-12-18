@@ -19,6 +19,8 @@ class FriendController {
       .orderBy('id', '1')
       .fetch();
 
+    const friendClicked = params.id;
+    const userMessagedId = params.id;
     const userId = auth.user.id;
 
     const messages = await Friend
@@ -28,7 +30,7 @@ class FriendController {
       .orderBy('id', '1')
       .fetch()
 
-    return view.render('pages/friends', { friends: friends.toJSON(), userId, messages: messages.toJSON(), userMessagedId: params.id });
+    return view.render('pages/friends', { friends: friends.toJSON(), userId, messages: messages.toJSON(), friendClicked, userMessagedId });
   }
 
   async sendMessage({ request, auth, response }) {

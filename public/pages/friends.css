@@ -11,6 +11,27 @@
   width: 36em;
 }
 
+.friend_clicked {
+  background-color: rgb(117, 117, 117);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  color: black;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.friends_not_clicked {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  color: black;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
 .message_from_user {
   display: flex;
   align-items: center;
@@ -112,15 +133,6 @@
   margin-left: -3.8em;
   border-left: 4px solid rgb(0, 153, 255);
   border-right: 4px solid rgb(0, 153, 255);
-}
-
-.friend_click {
-  text-decoration: none;
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  color: black;
-  margin-bottom: 1em;
 }
 
 .username {

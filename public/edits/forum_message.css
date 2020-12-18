@@ -30,7 +30,7 @@
   border-radius: 27px 0px 0px 27px;
   resize: none;
   font-family: 'Cairo', sans-serif;
-  font-size: 20px;
+  font-size: 19px;
   text-align: center;
   line-height: 19px;
 }
@@ -51,8 +51,17 @@
 
 .forum_messages_wrapper {
   overflow-y: scroll;
-  height: 125vw; 
+  height: 75em; 
 }
+
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 812px) 
+  and (-webkit-device-pixel-ratio : 3) { 
+    .forum_messages_wrapper {
+      height: 98.5em !important; 
+    }
+  }
 
 .message-content {
   display: flex;
