@@ -6,6 +6,21 @@
   position: relative;
 }
 
+@media (max-width:70em) {
+  .textarea_container {
+    left: 18.5% !important;
+  }
+}
+
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 812px) 
+  and (-webkit-device-pixel-ratio : 3) { 
+    .comments-container {
+      height: 102em !important; 
+    }
+  }
+
 .forum-message-being-commented {
   display: flex;
   flex-direction: column;
@@ -20,7 +35,7 @@
 
 .comments-container {
   overflow-y: scroll;
-  height: 125vw; 
+  height: 78em; 
 }
 
 .comment-container {
@@ -52,12 +67,6 @@
   color: rgb(240, 6, 6);
   font-size: 25px;
   margin-top: 6px;
-}
-
-@media only screen and (max-width: 40em) {
-  .content {
-    background-color: rgb(13, 85, 109);
-  }
 }
 
 .textarea_container {

@@ -56,6 +56,15 @@
   height: 125vw; 
 }
 
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 812px) 
+  and (-webkit-device-pixel-ratio : 3) { 
+    .forum_messages_wrapper {
+      height: 100em !important;
+    }
+  }
+
 .message-content {
   display: flex;
   flex-direction: column;

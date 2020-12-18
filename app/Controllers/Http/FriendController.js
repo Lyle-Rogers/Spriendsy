@@ -41,6 +41,13 @@ class FriendController {
 
     return response.redirect('back');
   }
+
+  async deleteMessage({ params, response }) {
+    const message = await Friend.find(params.id);
+    await message.delete();
+
+    return response.redirect('back');
+  }
 }
 
 module.exports = FriendController

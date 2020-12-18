@@ -12,7 +12,7 @@
           @if(message.user_id === userId)
             <div class="message_from_user">
               <p class="message">{{ message.message }}</p>
-              <a class="delete_btn" href="{{ route('FriendController.deleteMessage', { id: message.id})}}"><i id="delete_svg" class="fas fa-trash"></i></a>
+              <a class="delete_btn" href="{{ route('FriendController.deleteMessage', { id: message.id }) }}"><i id="delete_svg" class="fas fa-trash"></i></a>
             </div>
           @else
             <div class="message_from_friend">
@@ -58,7 +58,7 @@
           <h3 class="username">{{ friend.username }}</h3>
           <div class="status_content">
             <div class="in_lebaron">
-              <h4>In Lebaron:</h4>
+              <h4 class="in_lebaron_text">In Lebaron:</h4>
               @if(friend.in_lebaron === true)
                 <div class="in_lebaron_true">
                   <i id="in_lebaron_true_svg" class="fas fa-jedi"></i>
@@ -70,7 +70,7 @@
               @endif
             </div>
             <div class="friendly">
-              <h4>Friendly:</h4>
+              <h4 class="friendly_text">Friendly:</h4>
               @if(friend.friendly === true)
                 <div class="friendly_true">
                   <i id="friendly_true_svg" class="fas fa-jedi"></i>
