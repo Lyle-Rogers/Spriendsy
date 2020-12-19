@@ -1,0 +1,55 @@
+@layout('navigation')
+
+@section('extracss')
+  {{ style('creators/add_business') }}
+@endsection
+
+@section('content')
+<div class="content">
+  <div class="add_business_text">
+    <p>Businesses on this site are for Spiritual purposes only. If you have any</p>
+    <p>type of hobby or sell anything that is spiritually beneficial, feel free</p>
+    <P>to add as many businesses as you like, pertaining to those</P>
+    <p>things. And please add a way to contact you in the</p>
+    <p>description, as you may not be notified when</p>
+    <p>texted by another Spriendsy user.</p>
+  </div>
+  <form action="{{ route('BusinessController.postBusiness') }}" method="POST">
+    {{ csrfField() }}
+
+    <div class="business_name_input_content">
+      <label class="business_name_label" for="business_name">Business Name</label>
+      <div class="business_name_input_container">
+        <input 
+          type="text" 
+          class="business_name_input"
+          name="business_name" 
+          value="{{ old('business_name', '') }}"
+        >
+      </div>
+      @if(hasErrorFor('business_name'))
+        <span class="business_name_error">{{ getErrorFor('business_name') }}</span>
+      @endif
+    </div>
+    <div class="business_description_content">
+      <label class="description_label" for="description">Business Description</label>
+      <textarea 
+        class="business_description_textarea" 
+        name="description" 
+        value="{{ old('description', '') }}"
+      ></textarea>
+      @if(hasErrorFor('description'))
+        <span class="description_error">{{ getErrorFor('description') }}</span>
+      @endif
+    </div>
+    <div class="post_btn_content">
+      <button class="post_btn" type="submit">
+        <div class="post_btn_text">
+          POST
+        </div>
+        <i id="worship_icon" class="fas fa-place-of-worship"></i>
+      </button>
+    </div>
+  </form>
+</div>
+@endsection

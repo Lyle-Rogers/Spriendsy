@@ -1,0 +1,124 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.business_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 25px;
+  font-family: 'Cairo', sans-serif;
+  margin-bottom: 15px;
+  color: rgb(0, 0, 0);
+  width: 40em;
+  font-size: 23px;
+}
+
+.add_business_btn {
+  text-decoration: none;                color: rgb(0, 153, 255);
+  color: rgb(0, 153, 255);
+  font-size: 30px;
+  font-family: 'Piedra', cursive;
+  padding: 6px 16px 6px 16px;
+  background-color: black;
+  border-radius: 23px 23px 23px 23px;
+}
+
+.business_content {
+  margin-top: 3.5em;
+  margin-bottom: 3.5em;
+}
+
+.delete_edit_comments_btns_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delete_edit_btns_comments_container {
+  display: flex;
+}
+
+.delete_btn {
+  text-decoration: none;                color: rgb(0, 153, 255);
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  margin-top: 6px;
+}
+
+.edit_btn {
+  margin-left: 5em;
+  text-decoration: none;                color: rgb(0, 153, 255);
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+}
+
+.comments_btn {
+  font-family: 'Anton', sans-serif;
+  text-decoration: none;
+  margin-left: 7.9em;
+  margin-right: -57px;
+  color: rgb(0, 153, 255);
+  font-size: 15px;
+  display: flex;
+  font-size: 25px;
+  background-color: rgb(0, 0, 0);
+  padding: 10px 12px 0px 12px;
+  border-radius: 20px 0px 0px 0px;
+}
+
+.comments_btn_2 {
+  font-family: 'Anton', sans-serif;
+  text-decoration: none;
+  color: rgb(0, 153, 255);
+  font-size: 25px;
+  margin-left: 17.2em;
+  background-color: rgb(0, 0, 0);
+  padding: 10px 12px 0px 12px;
+  border-radius: 20px 0px 0px 0px;
+}
+
+.business_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 6px rgb(0, 0, 0);
+  border-radius: 50px 0px 50px 50px;
+  background-color: rgb(0, 0, 0);
+}
+
+.business_name {
+  color: rgb(0, 153, 255);
+  font-family: 'Audiowide', cursive;
+  width: 20.2em;
+  border: none;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.owner_info {
+  text-decoration: none;
+}
+
+.owner_name {
+  color: rgb(144, 0, 0);
+  font-family: 'Audiowide', cursive;
+  width: 22em;
+  border: none;
+  text-align: center;
+  font-size: 23px;
+}
+
+.business_description_container {
+  text-align: justify;
+  width: 27em;
+  color: rgb(0, 153, 255);
+  font-family: 'Cairo', sans-serif;
+  line-height: 23px;  
+  font-size: 20px; 
+  margin-bottom: 10px;
+}

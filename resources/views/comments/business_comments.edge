@@ -1,0 +1,60 @@
+@layout('navigation')
+
+@section('extracss')
+  {{ style('comments/business') }}
+@endsection
+
+@section('content')
+  <div class="content">
+    <div class="business_container">
+      <h3 class="business_name">{{ businessBeingCommented.name }}</h3>
+      <a class="owner_info" href="/friends/{{ businessBeingCommented.user_id }}">
+        <div class="owner_name_content">
+          <h4 class="owner_name">By: {{ businessBeingCommented.owner_name }}</h4>
+        </div>
+      </a>
+      <div class="business_description_content">
+        <p class="business_description_container">{{ businessBeingCommented.description }}</p>
+      </div>
+    </div>
+    <div class="comments_container">
+      @each(comment in comments)
+        <div class="comment_container">
+          <h3 class="username">{{ comment.username }}</h3>
+          <p class="comment" readonly>{{ comment.comment }}</p>
+          @if(comment.user_id === theId)
+            <a class="delete_btn" href="{{ route('BusinessCommentController.deleteComment', { id: comment.id }) }}"><i id="delete_svg" class="fas fa-trash"></i></a>
+          @endif
+        </div>
+      @endeach
+    </div>
+    <form action="{{ route('BusinessCommentController.sendComment', { id: messageBeingCommented.id }) }}" method="POST">
+      {{ csrfField() }}
+  
+      <div class="textarea_content">
+        <script>
+          function autoheight(x) {
+            x.style.height = "5px";
+            x.style.height = (15+x.scrollHeight)+"px";
+          }
+        </script>
+        <div class="textarea_container">
+          @if(hasErrorFor('business_comment_message'))
+            <span>
+              {{ getErrorFor('business_comment_message') }}
+            </span>
+          @endif
+          <div class="textarea_wrapper">
+            <textarea 
+              id="business_comments_textarea" 
+              name="business_comment_message" 
+              onkeyup="autoheight(this)"
+              value="{{ old('business_comment_message', '') }}"
+            ></textarea>
+            <button type="submit" class="send_btn"><i class="fas fa-share-square"></i></button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+@endsection

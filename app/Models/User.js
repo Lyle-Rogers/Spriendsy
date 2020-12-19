@@ -46,6 +46,10 @@ class User extends Model {
   friendMessages () {
     return this.hasMany('App/Models/Friend')
   }
+
+  businesses () {
+    return this.hasMany('App/Models/Business')
+  }
 }
 
 module.exports = User

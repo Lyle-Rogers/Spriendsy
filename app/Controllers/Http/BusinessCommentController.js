@@ -1,36 +1,36 @@
 'use strict'
 
-const ForumMessages = use('App/Models/ForumMessages');
-const ForumComment = use('App/Models/ForumComment')
+const Businesses = use('App/Models/Business')
+const BusinessComments = use('App/Models/BusinessComment')
 
-class ForumCommentController {
-  async commentLoader({ view, params, auth }) {
-    const messageBeingCommented = await ForumMessages.find(params.id);
+class BusinessCommentController {
+  async commentsLoader({ params, view, auth }) {
+    const businessBeingCommented = await Businesses.find(params.id);
 
-    const comments = await ForumComment
+    const comments = await BusinessComments
       .query()
-      .where('forum_message_id', params.id)
+      .where('business_id', params.id)
       .orderBy('id', '1')
       .fetch()
 
     const theId = auth.user.id;
 
-    return view.render('comments/forum_comments', { messageBeingCommented: messageBeingCommented, comments: comments.toJSON(), theId });
+    return view.render('comments/business_comments', { businessBeingCommented: businessBeingCommented, theId, comments: comments.toJSON() })
   }
 
   async sendComment({ request, auth, response, params }) {
     const comment = request.all();
-    const forumMessageId = params.id;
-    const forumMessage = await ForumMessages.find(params.id);
+    const businessId = params.id;
+    const businessMessage = await BusinessMessages.find(params.id);
 
     const userId = auth.user.id;
     const username = auth.user.username;
 
     const posted = await ForumComment.create({
-      comment: comment.forum_comment_message,
+      comment: comment.business_comment_message,
       user_id: userId,
       username: username,
-      forum_message_id: forumMessageId
+      business_id: businessId
     });
 
     const commentCount = await ForumComment
@@ -40,7 +40,7 @@ class ForumCommentController {
 
     forumMessage.comment_amount = commentCount;
 
-    await forumMessage.save();
+    await businessMessage.save();
 
     return response.redirect('back');
   }
@@ -53,4 +53,4 @@ class ForumCommentController {
   }
 }
 
-module.exports = ForumCommentController
+module.exports = BusinessCommentController

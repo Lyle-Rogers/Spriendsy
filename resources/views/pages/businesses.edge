@@ -1,0 +1,53 @@
+@layout('navigation')
+
+@section('extracss')
+  {{ style('pages/business') }}
+@endsection
+
+@section('content')
+<div class="content">
+  <div class="business_text">
+    <p>Businesses on Spriendsy are for Spiritual purposes only. Like ordering</p>
+    <p>tarot readings or buying energy crystals. If you're interested in</p>
+    <p>a business, please contact the business owners personally.</p>
+    <p>Because they might not be notified by your messages.</p>
+  </div>
+  <div class="add_business_btn_content">
+    <a class="add_business_btn" href="/add_business">add business</a>
+  </div>
+  <div class="businesses_wrapper">
+    @each(business in businesses)
+      <div class="business_content">
+        <div class="delete_edit_comments_btns_content">
+          @if(business.user_id === userId)
+            <div class="delete_edit_btns_comments_container">
+              <div class="delete_edit_btns_container">
+                <a class="delete_btn" href="{{ route('BusinessController.deleteBusiness', { id: business.id }) }}"><i id="delete_svg" class="fas fa-trash"></i></a>
+                <a class="edit_btn" href="{{ route('BusinessController.editBusiness', { id: business.id }) }}"><i id="edit_svg" class="fas fa-marker"></i></a>
+              </div>
+              <div class="comments_btn_content">
+                <a class="comments_btn" href="{{ route('BusinessCommentController.commentsLoader', { id: business.id }) }}">Comments {{ business.comment_amount }}</a>
+              </div>
+            </div>
+          @else
+            <div class="comments_btn_content_2">
+              <a class="comments_btn_2" href="{{ route('BusinessCommentController.commentsLoader', { id: business.id }) }}">Comments {{ business.comment_amount }}</a>
+            </div>
+          @endif
+        </div>
+        <div class="business_container">
+          <h3 class="business_name">{{ business.name }}</h3>
+          <a class="owner_info" href="/friends/{{ business.user_id }}">
+            <div class="owner_name_content">
+              <h4 class="owner_name">By: {{ business.owner_name }}</h4>
+            </div>
+          </a>
+          <div class="business_description_content">
+            <p class="business_description_container">{{ business.description }}</p>
+          </div>
+        </div>
+      </div>
+    @endeach
+  </div>
+</div>
+@endsection

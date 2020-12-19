@@ -18,7 +18,6 @@ const Route = use('Route')
 
 Route.on('/archive').render('pages/archive')
 Route.on('/profile-settings').render('pages/profile-settings')
-Route.on('/business').render('pages/business')
 
 Route.on('/login').render('auth/login')
 Route.post('/login', 'UserController.login').validator('Login')
@@ -45,3 +44,12 @@ Route.get('/friends', 'FriendController.renderFriends')
 Route.get('/friends/:id', 'FriendController.friendMessagesLoader')
 Route.post('/friends', 'FriendController.sendMessage')
 Route.get('/friends/delete_message/:id', 'FriendController.deleteMessage')
+
+Route.get('/businesses', 'BusinessController.loadBusinesses')
+Route.on('add_business').render('creators/add_business')
+Route.post('/businesses', 'BusinessController.postBusiness')
+Route.get('businesses/delete/:id', 'BusinessController.deleteBusiness')
+Route.get('/businesses/edit/:id', 'BusinessController.editBusiness')
+Route.post('/businesses/update/:id', 'BusinessController.updateBusiness')
+
+Route.get('/business_comments/:id', 'BusinessCommentController.commentsLoader')
