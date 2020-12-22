@@ -21,32 +21,32 @@ class BusinessCommentController {
   async sendComment({ request, auth, response, params }) {
     const comment = request.all();
     const businessId = params.id;
-    const businessMessage = await BusinessMessages.find(params.id);
+    const business = await Businesses.find(params.id);
 
     const userId = auth.user.id;
     const username = auth.user.username;
 
-    const posted = await ForumComment.create({
+    const posted = await BusinessComments.create({
       comment: comment.business_comment_message,
       user_id: userId,
       username: username,
       business_id: businessId
     });
 
-    const commentCount = await ForumComment
+    const commentCount = await BusinessComments
       .query()
-      .where('forum_message_id', params.id)
+      .where('business_id', params.id)
       .getCount();
 
-    forumMessage.comment_amount = commentCount;
+    business.comment_amount = commentCount;
 
-    await businessMessage.save();
+    await business.save();
 
     return response.redirect('back');
   }
 
   async deleteComment({ params, response }) {
-    const comment = await ForumComment.find(params.id);
+    const comment = await BusinessComments.find(params.id);
     await comment.delete();
 
     return response.redirect('back');

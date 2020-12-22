@@ -53,3 +53,5 @@ Route.get('/businesses/edit/:id', 'BusinessController.editBusiness')
 Route.post('/businesses/update/:id', 'BusinessController.updateBusiness')
 
 Route.get('/business_comments/:id', 'BusinessCommentController.commentsLoader')
+Route.post('/business_comments/:id', 'BusinessCommentController.sendComment')
+Route.get('/business_comments/delete/:id', 'BusinessCommentController.deleteComment')

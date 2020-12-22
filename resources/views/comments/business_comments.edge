@@ -28,7 +28,7 @@
         </div>
       @endeach
     </div>
-    <form action="{{ route('BusinessCommentController.sendComment', { id: messageBeingCommented.id }) }}" method="POST">
+    <form action="{{ route('BusinessCommentController.sendComment', { id: businessBeingCommented.id }) }}" method="POST">
       {{ csrfField() }}
   
       <div class="textarea_content">

@@ -8,13 +8,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   line-height: 25px;
   font-family: 'Cairo', sans-serif;
   margin-bottom: 15px;
   color: rgb(0, 0, 0);
-  width: 40em;
+  width: 60em;
+  font-size: 12px;
+}
+
+#text1 {
+  width: 42em;
   font-size: 23px;
+  text-align: center;
 }
 
 .add_business_btn {
@@ -25,6 +30,21 @@
   padding: 6px 16px 6px 16px;
   background-color: black;
   border-radius: 23px 23px 23px 23px;
+}
+
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 812px) 
+  and (-webkit-device-pixel-ratio : 3) { 
+    .businesses_wrapper {
+      height: 98.5em !important;
+    }
+  }
+
+.businesses_wrapper {
+  overflow-y: scroll;
+  height: 74.5em;
+  margin-top: 25px;
 }
 
 .business_content {
@@ -61,6 +81,7 @@
   text-decoration: none;
   margin-left: 7.9em;
   margin-right: -57px;
+  margin-bottom: -2px;
   color: rgb(0, 153, 255);
   font-size: 15px;
   display: flex;
@@ -76,6 +97,7 @@
   color: rgb(0, 153, 255);
   font-size: 25px;
   margin-left: 17.2em;
+  margin-bottom: -2px;
   background-color: rgb(0, 0, 0);
   padding: 10px 12px 0px 12px;
   border-radius: 20px 0px 0px 0px;
