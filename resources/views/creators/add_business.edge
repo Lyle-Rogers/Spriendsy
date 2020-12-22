@@ -7,12 +7,12 @@
 @section('content')
 <div class="content">
   <div class="add_business_text">
-    <p>Businesses on this site are for Spiritual purposes only. If you have any</p>
-    <p>type of hobby or sell anything that is spiritually beneficial, feel free</p>
-    <P>to add as many businesses as you like, pertaining to those</P>
-    <p>things. And please add a way to contact you in the</p>
-    <p>description, as you may not be notified when</p>
-    <p>texted by another Spriendsy user.</p>
+    <p class="text">Businesses on this site are for Spiritual purposes only. If you have any</p>
+    <p class="text">type of hobby or sell anything that is spiritually beneficial, feel free</p>
+    <P class="text">to add as many businesses as you like, pertaining to those</P>
+    <p class="text">things. And please add a way to contact you in the</p>
+    <p class="text">description, as you may not be notified when</p>
+    <p class="text">texted by another Spriendsy user.</p>
   </div>
   <form action="{{ route('BusinessController.postBusiness') }}" method="POST">
     {{ csrfField() }}
