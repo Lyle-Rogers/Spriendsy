@@ -17,56 +17,55 @@
   and (device-height : 812px) 
   and (-webkit-device-pixel-ratio : 3) { 
     .comments_container {
-      height: 102em !important; 
+      height: 90em !important; 
     }
   }
 
-  .business_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid 6px rgb(0, 0, 0);
-    border-radius: 50px 50px 50px 50px;
-    background-color: rgb(0, 0, 0);
-  }
-  
-  .business_name {
-    color: rgb(0, 153, 255);
-    font-family: 'Audiowide', cursive;
-    width: 20.2em;
-    border: none;
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  
-  .owner_info {
-    text-decoration: none;
-  }
-  
-  .owner_name {
-    color: rgb(144, 0, 0);
-    font-family: 'Audiowide', cursive;
-    width: 22em;
-    border: none;
-    text-align: center;
-    font-size: 23px;
-  }
-  
-  .business_description_container {
-    text-align: justify;
-    width: 27em;
-    color: rgb(0, 153, 255);
-    font-family: 'Cairo', sans-serif;
-    line-height: 23px;  
-    font-size: 20px; 
-    margin-bottom: 10px;
-  }
+.business_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 6px rgb(0, 0, 0);
+  border-radius: 50px 50px 50px 50px;
+  background-color: rgb(0, 0, 0);
+}
+
+.business_name {
+  color: rgb(0, 153, 255);
+  font-family: 'Audiowide', cursive;
+  width: 20.2em;
+  border: none;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.owner_info {
+  text-decoration: none;
+}
+
+.owner_name {
+  color: rgb(144, 0, 0);
+  font-family: 'Audiowide', cursive;
+  width: 22em;
+  border: none;
+  text-align: center;
+  font-size: 23px;
+}
+
+.business_description_container {
+  text-align: justify;
+  width: 27em;
+  color: rgb(0, 153, 255);
+  font-family: 'Cairo', sans-serif;
+  line-height: 23px;  
+  font-size: 20px; 
+  margin-bottom: 10px;
+}
 
 .comments_container {
   overflow-y: scroll;
-  height: 78em; 
-  margin-bottom: 3em;
+  height: 68em; 
 }
 
 .comment_container {

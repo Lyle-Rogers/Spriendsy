@@ -12,13 +12,13 @@
   font-family: 'Cairo', sans-serif;
   margin-bottom: 15px;
   color: rgb(0, 0, 0);
-  width: 60em;
+  width: 45em;
   font-size: 12px;
 }
 
 #text1 {
-  width: 42em;
-  font-size: 23px;
+  width: 35em;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -50,6 +50,7 @@
 .business_content {
   margin-top: 3.5em;
   margin-bottom: 3.5em;
+  width: 36.3em;
 }
 
 .delete_edit_comments_btns_content {
@@ -81,25 +82,32 @@
   text-decoration: none;
   margin-left: 7.9em;
   margin-right: -57px;
-  margin-bottom: -2px;
+  margin-bottom: -3px;
   color: rgb(0, 153, 255);
   font-size: 15px;
   display: flex;
   font-size: 25px;
   background-color: rgb(0, 0, 0);
   padding: 10px 12px 0px 12px;
+  width: 5em;
   border-radius: 20px 0px 0px 0px;
+}
+
+.comments_btn_content_2 {
+  margin-bottom: -3px;
+  margin-left: 26.9em;
 }
 
 .comments_btn_2 {
   font-family: 'Anton', sans-serif;
   text-decoration: none;
   color: rgb(0, 153, 255);
+  font-size: 15px;
+  display: flex;
   font-size: 25px;
-  margin-left: 17.2em;
-  margin-bottom: -2px;
   background-color: rgb(0, 0, 0);
   padding: 10px 12px 0px 12px;
+  width: 5em;
   border-radius: 20px 0px 0px 0px;
 }
 
