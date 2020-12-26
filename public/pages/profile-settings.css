@@ -1,17 +1,205 @@
 .content {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.new_messages_and_singout_content {
+  display: flex;
   justify-content: center;
 }
 
+.new_messages_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-left: 15.3em;
+}
+
+.new_messages_text {
+  font-family: 'Audiowide', cursive;
+  color: rgb(0, 153, 255);
+  font-size: 27px;
+}
+
+.new_messages_wrapper {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: 26.4em;
+  width: 19em;
+  border-left: 4px solid rgb(0, 153, 255);
+  border-right: 4px solid rgb(0, 153, 255);
+}
+
+.new_message_container {
+  display: flex;
+  align-items: center;
+}
+
+.sender_username_btn {
+  text-decoration: none;
+  outline: none;
+}
+
+.sender_username {
+  font-size: 23px;
+  color: rgb(0, 0, 0);
+  font-family: 'Audiowide', cursive;
+  width: 11em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.delete_btn {
+  font-family: 'Covered By Your Grace', cursive;
+  text-decoration: none;
+  outline: none;
+  font-size: 45px;
+  color: rgb(240, 34, 6);
+  margin-top: -25px;
+  padding-left: inherit;
+  margin-left: 22px;
+}
+
 .sign-out-btn {
-  font-size: 22px;
+  font-size: 27px;
   margin-top: 7px;
   font-family: 'Roboto', sans-serif;
   color: rgb(0, 197, 0);
   text-decoration: none;
+  margin-left: 3em;
+  font-weight: 600;
 }
 
 #sign-out-svg {
   margin-left: 5px;
+}
+
+.profile_settings_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 27px;
+  font-family: 'Cairo', sans-serif;
+  margin-bottom: 10px;
+  color: rgb(0, 0, 0);
+  width: 37em;
+  font-size: 26px;
+}
+
+.status_container {
+  display: flex;
+  justify-content: center;
+}
+
+.friendly_status_container {
+  display: flex;
+  align-items: center;
+  font-family: "Odibee Sans", cursive;
+  font-size: 33px;
+  margin-left: 2.2em;
+}
+
+.in_lebaron_status_container {
+  display: flex;
+  align-items: center;
+  font-family: "Odibee Sans", cursive;
+  font-size: 33px;
+}
+
+.in_lebaron_text {
+  letter-spacing: 1px;
+}
+
+#in_lebaron_true_svg {
+  color: rgb(5, 209, 5);
+  margin-top: 3px;
+  font-size: 40px;
+  margin-left: 4px;
+}
+
+#in_lebaron_false_svg {
+  color: rgb(240, 34, 6);
+  margin-top: 3px;
+  font-size: 40px;
+  margin-left: 4px;
+}
+
+.friendly_text {
+  letter-spacing: 1px;
+}
+
+#friendly_true_svg {
+  color: rgb(5, 209, 5);
+  margin-top: 3px;
+  font-size: 40px;
+  margin-left: 4px;
+}
+
+#friendly_false_svg {
+  color: rgb(240, 34, 6);
+  margin-top: 3px;
+  font-size: 40px;
+  margin-left: 4px;
+}
+
+.username_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.username_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 27px;
+  font-family: 'Cairo', sans-serif;
+  margin-bottom: 15px;
+  color: rgb(0, 0, 0);
+  width: 37em;
+  font-size: 26px;
+}
+
+.username_input {
+  font-family: 'Audiowide', cursive;
+  border: none;
+  border-bottom: 3px solid rgb(0, 148, 247);
+  width: 15em;
+  outline: none;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.save_btn {
+  border: none;
+  outline: none;
+  height: 25px;
+  background: none;
+}
+
+.save_btn_text {
+  background-color: rgb(5, 209, 5);
+  font-family: 'Piedra', cursive;
+  font-size: 17px;
+  border-radius: 12px;
+  margin-bottom: -11px;
+  padding: 6px 9px 5px 9px;
+  font-size: 18px;
+}
+
+#worship_icon {
+  color: rgb(5, 209, 5);
+  transform: rotate(180deg);
+  font-size: 34px;
+  margin-bottom: 40px;
 }

@@ -1,0 +1,83 @@
+@layout('navigation')
+
+@section('extracss')
+  {{ style('pages/profile-settings') }}
+@endsection
+
+@section('content')
+  <div class="content">
+    <div class="new_messages_and_singout_content">
+      <div class="new_messages_content">
+        <h3 class="new_messages_text">New Messages</h3>
+        <div class="new_messages_wrapper">
+          @each(newMessage in newMessages)
+            <div class="new_message_container">
+              <a class="sender_username_btn" href="{{ route('ProfileSettingController.newMessageClicked', { to: newMessage.to, sender_id: newMessage.sender_id }) }}">
+                <h3 class="sender_username">{{ newMessage.sender_username }}</h3>
+              </a>
+              <a class="delete_btn" href="{{ route('ProfileSettingController.deleteNewMessages', { to: newMessage.to, sender_id: newMessage.sender_id }) }}">
+                x
+              </a>
+            </div>
+          @endeach
+        </div>
+      </div>
+      <a class="sign-out-btn" href="/logout">
+        SIGN OUT
+        <i id="sign-out-svg" class="fas fa-sign-out-alt"></i>
+      </a>
+    </div>
+    <div class="profile_settings_content">
+      <div class="status_content">
+        <div class="status_text">
+          <p>Are you looking for new spiritual friends? By submiting that you'r friendly,</p>
+          <p>means you are ok with other people getting to know you or contact you.</p>
+        </div>
+        <div class="status_container">
+          <div class="in_lebaron_status_container">
+            <h3 class="in_lebaron_text">In Lebaron:</h3>
+            <a href="{{ route('ProfileSettingController.inLebaronClick') }}">
+              @if(inLebaron === true)
+                <i id="in_lebaron_true_svg" class="fas fa-jedi"></i>
+              @else
+                <i id="in_lebaron_false_svg" class="fas fa-jedi"></i>
+              @endif
+            </a>
+          </div>
+          <div class="friendly_status_container">
+            <h3 class="friendly_text">Friendly:</h3>
+            <a href="{{ route('ProfileSettingController.friendlyClick') }}">
+              @if(friendly === true)
+                <i id="friendly_true_svg" class="fas fa-jedi"></i>
+              @else
+                <i id="friendly_false_svg" class="fas fa-jedi"></i>
+              @endif
+            </a>
+          </div>
+        </div>
+      </div>
+    <form class="username_form" action="{{ route('ProfileSettingController.saveUsername')}}" method="POST">
+      {{ csrfField() }}  
+      
+      <div class="username_text">
+          <p>Warning: Changing your name won't change the username on your</p>
+          <p>businesses and forum messages that are already posted.</p>
+        </div>
+        <div class="username_input_container">
+          <input 
+            type="text"
+            class="username_input"
+            name="username"
+            value="{{ user.username }}"
+          >
+        </div>
+        <button class="save_btn" type="submit">
+          <div class="save_btn_text">
+            SAVE
+          </div>
+          <i id="worship_icon" class="fas fa-place-of-worship"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+@endsection

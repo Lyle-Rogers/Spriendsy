@@ -16,8 +16,8 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
+Route.get('/', 'ForumMessagingController.messagesLoader')
 Route.on('/archive').render('pages/archive')
-Route.on('/profile-settings').render('pages/profile-settings')
 
 Route.on('/login').render('auth/login')
 Route.post('/login', 'UserController.login').validator('Login')
@@ -55,3 +55,10 @@ Route.post('/businesses/update/:id', 'BusinessController.updateBusiness')
 Route.get('/business_comments/:id', 'BusinessCommentController.commentsLoader')
 Route.post('/business_comments/:id', 'BusinessCommentController.sendComment')
 Route.get('/business_comments/delete/:id', 'BusinessCommentController.deleteComment')
+
+Route.get('/profile_settings', 'ProfileSettingController.loadEverything')
+Route.get('/profile_settings/:to/:sender_id', 'ProfileSettingController.newMessageClicked')
+Route.get('/profile_settings/delete/:to/:sender_id', 'ProfileSettingController.deleteNewMessages')
+Route.get('/profile_settings/in_lebaron_click', 'ProfileSettingController.inLebaronClick')
+Route.get('/profile_settings/friendly_click', 'ProfileSettingController.friendlyClick')
+Route.post('/profile_settings', 'ProfileSettingController.saveUsername')

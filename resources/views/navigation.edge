@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cairo:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
   
   {{ style('navigation') }}
 
@@ -28,14 +29,24 @@
     <div class="user-status-profile-btn-container">
       <div class="user-status">
         <div class="in-lebaron-status-wrapper">
-          <p class="in-lebaron-status">In Lebaron:</p><i id="in_lebaron_svg" class="fas fa-jedi"></i>
+          <p class="in-lebaron-status">In Lebaron:</p>
+          @if(auth.user.in_lebaron === true)
+            <i id="true_svg" class="fas fa-jedi"></i>
+          @else
+            <i id="false_svg" class="fas fa-jedi"></i>
+          @endif
         </div>
         <div class="friendly-status-wrapper">
-          <p class="friendly-status">Friendly:</p><i id="friendly_svg" class="fas fa-jedi"></i>
+          <p class="friendly-status">Friendly:</p>
+          @if(auth.user.friendly === true)
+            <i id="true_svg" class="fas fa-jedi"></i>
+          @else
+            <i id="false_svg" class="fas fa-jedi"></i>
+          @endif
         </div>
       </div>
       <div class="profile-settings-btn">
-        <a href="/profile-settings">
+        <a href="/profile_settings">
           <i id="profile-setting-btn-svg" class="fas fa-user-edit"></i>
         </a>
       </div>

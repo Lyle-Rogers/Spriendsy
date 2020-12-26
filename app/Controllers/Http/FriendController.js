@@ -2,6 +2,7 @@
 
 const User = use('App/Models/User');
 const Friend = use('App/Models/Friend')
+const NewMessage = use('App/Models/NewMessage')
 
 class FriendController {
   async renderFriends({view}) {
@@ -39,6 +40,12 @@ class FriendController {
     const sendMessage = await auth.user.friendMessages().create({
       message: message.friend_message,
       user_messaged_id: message.user_messaged_id
+    })
+
+    const newMessageNotifier = await NewMessage.create({
+      to: message.user_messaged_id,
+      sender_username: auth.user.username,
+      sender_id: auth.user.id
     })
 
     return response.redirect('back');

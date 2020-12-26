@@ -2,6 +2,8 @@
 
 const User = use('App/Models/User')
 const Hash = use('Hash')
+const FriendMessages = use('App/Models/Friend')
+const NewMessage = use('App/Models/NewMessage')
 
 class UserController {
   async create({ request, auth, response, session }) {
@@ -16,6 +18,17 @@ class UserController {
 
       await auth.login(user);
 
+      const sendWelcomeMessage = await FriendMessages.create({
+        message: `Welcome to Spriendsy, ${ request.username }`,
+        user_messaged_id: user.id
+      })
+  
+      const newMessageNotifier = await NewMessage.create({
+        to: user.id,
+        sender_username: 'Lyle Rogers',
+        sender_id: 1
+      })
+
       return response.redirect('/forum')
     } else {
       session.flash({ message: "The Group Pass is incorrect!" })
@@ -23,7 +36,6 @@ class UserController {
       return response.redirect('back')
     }
   }
-
 
   async login({ request, auth, session, response }) {
     const { username, password } = request.all();
