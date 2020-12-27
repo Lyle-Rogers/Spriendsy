@@ -1,3 +1,232 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.librairy_name_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Audiowide', cursive;
+  font-size: 40px;
+}
+
+.books_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 17px;
+  align-items: center;
+  overflow-y: scroll;
+  height: 24em;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.book_titles {
+  font-family: 'Roboto', sans-serif;
+  width: 9em;
+  margin-top: -17px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.flower_of_life_v1 {
+  background-image: url('../images/books/dm_folbook_book1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;
+}
+
+.flower_of_life_v2 {
+  background-image: url('../images/books/flowerOfLifeV2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;
+}
+
+.cwg_1 {
+  background-image: url('../images/books/cwg1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px; 
+}
+
+.cwg_2 {
+  background-image: url('../images/books/_cwg_book2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px; 
+}
+
+.cwg_3 {
+  background-image: url('../images/books/cwg3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px; 
+}
+
+.cwg_4 {
+  background-image: url('../images/books/cwg4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px; 
+}
+
+.sapiens {
+  background-image: url('../images/books/sapiens.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px; 
+}
+
+.auto_biography_of_a_yogi {
+  background-image: url('../images/books/autobiographyOfAYogi.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px; 
+}
+
+.the_subtle_art_of_not_giving_fuck {
+  background-image: url('../images/books/The-Subtle-Art-of-not-Giving-a-F-PDF-Mark-Manson-EnglishPDF.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px; 
+}
+
+.change_your_thoughts_change_your_life {
+  background-image: url('../images/books/cytcyl.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px; 
+}
+
+.the_awakening_psychic {
+  background-image: url('../images/books/theawakeningpsychicjpg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px; 
+}
+
+.the_emerald_tablets {
+  background-image: url('../images/books/emerald-tablets.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px; 
+}
+
+.living_with_the_himalayan_masters {
+  background-image: url('../images/books/lwthm.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px; 
+}
+
+.the_ra_contact {
+  background-image: url('../images/books/the-ra-contact.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px; 
+}
+
+.the_power_of_now {
+  background-image: url('../images/books/thepowerofnow.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px; 
+}
+
+.the_prophet {
+  background-image: url('../images/books/prophet47ed.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;   
+}
+
+.spiritual_quotes_name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Audiowide', cursive;
+  font-size: 40px;
+}
+
+.quote_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4em;
+}
+
+.username {
+  color: rgb(144, 0, 0);
+  font-family: 'Audiowide', cursive;
+  width: 20em;
+  border: none;
+  text-align: center;
+  font-size: 26px;
+}
+
+.quote {
+  text-align: center;
+  width: 27em;
+  color: rgb(240, 6, 6);
+  font-family: 'Cairo', sans-serif;
+  line-height: 23px;  
+  font-size: 20px; 
+}
+
+@media (max-width:70em) {
+  .textarea_container {
+    left: 18.5% !important;
+  }
+}
+
+.textarea_container {
+  position: fixed;
+  bottom: 0;
+  left: 27%;
+}
+
+.textarea_wrapper {
+  display: flex;
+}
+
+#textarea {
+  overflow: hidden;
+  height: 2em;
+  width: 28em;
+  outline: none;
+  border-width: 4px;
+  border-color: rgb(0, 153, 255);
+  border-radius: 27px 0px 0px 27px;
+  resize: none;
+  font-family: 'Cairo', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 15px;
+  margin-top: 0.9em;
+}
+
+.send_btn {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 55px;
+  margin-left: 1px;
+  color: rgb(0, 153, 255);
+  margin-top: 8px;
+}
+
 /* .archive-wrapper {
   display: flex;
   flex-direction: column;

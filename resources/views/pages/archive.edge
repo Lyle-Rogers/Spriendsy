@@ -1,9 +1,164 @@
 @layout('navigation')
 
-{{--  @section('extracss')
+@section('extracss')
   {{ style('pages/archive') }}
-@endsection  --}}
+@endsection
 
 @section('content')
-<h1>Archive</h1>
+  <div class="content">
+    <div class="librairy_container">
+      <div class="librairy_name_container">
+        <h3>Librairy of Wisdome</h3>
+      </div>
+      <div class="books_container">
+        <div class="books">
+          <a class="flower_of_life_v1" href="https://www.pdfdrive.com/the-ancient-secret-of-the-flower-of-life-volume-1-ancient-secret-of-the-flower-of-life-e184934660.html"></a>
+          <a class="book_titles" href="https://www.pdfdrive.com/the-ancient-secret-of-the-flower-of-life-volume-1-ancient-secret-of-the-flower-of-life-e184934660.html">
+            <h6>The Ancient Secret of the Flower of Life, Volume 1</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="flower_of_life_v2" href="https://www.pdfdrive.com/the-ancient-secret-of-the-flower-of-life-volume-2-ancient-secret-of-the-flower-of-life-e184253763.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/the-ancient-secret-of-the-flower-of-life-volume-2-ancient-secret-of-the-flower-of-life-e184253763.html">
+            <h6>The Ancient Secret of the Flower of Life, Volume 2</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="cwg_1" href="https://www.pdfdrive.com/conversations-with-god-1-e60359914.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/conversations-with-god-1-e60359914.html">
+            <h6>Conversations with God Book 1, An uncommon dialogue</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="cwg_2" href="https://www.pdfdrive.com/conversations-with-god-book-2-law-of-attraction-haven-e12731628.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/conversations-with-god-book-2-law-of-attraction-haven-e12731628.html">
+            <h6>Conversations with God Book 2, An uncommon dialogue</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="cwg_3" href="https://www.pdfdrive.com/conversations-with-god-law-attraction-haven-e17722305.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/conversations-with-god-law-attraction-haven-e17722305.html">
+            <h6>Conversations with God Book 3, An uncommon dialogue</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="cwg_4" href="https://www.pdfdrive.com/conversations-with-god-book-4-awaken-the-species-e186488002.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/conversations-with-god-book-4-awaken-the-species-e186488002.html">
+            <h6>Conversations with God Book 4, Awaken the Species</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="sapiens" href="https://www.pdfdrive.com/sapiens-a-brief-history-of-humankind-e175870479.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/sapiens-a-brief-history-of-humankind-e175870479.html">
+            <h6>Sapiens: A Brief History of Humankind</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="auto_biography_of_a_yogi" href="https://www.pdfdrive.com/autobiography-of-a-yogi-e184149575.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/autobiography-of-a-yogi-e184149575.html">
+            <h6>Autobiography of a Yogi</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="the_subtle_art_of_not_giving_fuck" href="https://www.pdfdrive.com/the-subtle-art-of-not-giving-a-fuck-e200709293.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/the-subtle-art-of-not-giving-a-fuck-e200709293.html">
+            <h6>The Subtle Art of Not Giving a Fuck</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="change_your_thoughts_change_your_life" href="https://www.pdfdrive.com/change-your-thoughts-change-your-life-living-the-wisdom-of-the-tao-e199753772.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/change-your-thoughts-change-your-life-living-the-wisdom-of-the-tao-e199753772.html">
+            <h6>Change Your Thoughts: Change Your Life: Living the Wisdom of the Tao</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="the_awakening_psychic" href="https://www.pdfdrive.com/the-awakened-psychic-what-you-need-to-know-to-develop-your-psychic-abilities-e194659655.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/the-awakened-psychic-what-you-need-to-know-to-develop-your-psychic-abilities-e194659655.html">
+            <h6>The awakened psychic: what you need to know to develop your psychic abilities</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="the_emerald_tablets" href="https://www.pdfdrive.com/the-emerald-tablets-of-thoth-the-atlantean-e161318431.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/the-emerald-tablets-of-thoth-the-atlantean-e161318431.html">
+            <h6>The Emerald Tablets of Thoth The Atlantean</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="living_with_the_himalayan_masters" href="https://www.pdfdrive.com/living-with-the-himalayan-masters-e188524148.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/living-with-the-himalayan-masters-e188524148.html">
+            <h6>Living with the Himalayan Masters</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="the_ra_contact" href="https://www.pdfdrive.com/the-ra-contact-teaching-the-law-of-one-volume-1-2-e195296487.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/the-ra-contact-teaching-the-law-of-one-volume-1-2-e195296487.html">
+            <h6>The Ra Contact: Teaching the Law of One: Volume 1 & 2</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="the_power_of_now" href="https://www.pdfdrive.com/the-power-of-now-a-guide-to-spiritual-enlightenment-e176376600.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/the-power-of-now-a-guide-to-spiritual-enlightenment-e176376600.html">
+            <h6>The Power of Now: A Guide to Spiritual Enlightenment</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="the_prophet" href="https://www.pdfdrive.com/the-prophet-e162489909.html"/>
+          <a class="book_titles" href="https://www.pdfdrive.com/the-prophet-e162489909.html">
+            <h6>The Prophet</h6>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="spiritual_quotes_content">
+      <div class="spiritual_quotes_name">
+        <h3>Spiritual Quotes</h3>
+      </div>
+      <div class="spiritual_quotes_wrapper">
+        @each(spiritualQuote in spiritualQuotes)
+          <div class="spiritual_quotes_container">
+            <div class="username">
+              <h4>{{ spiritualQuote.username }}</h4>
+            </div>
+            <div class="quote_container">
+              <p class="quote">{{ spiritualQuote.quote }}</p>
+            </div>
+            @if(spiritualQuote.user_id === userId)
+              <div class="delete-edit-btns-content">
+                <a class="delete_btn" href="{{ route('ArchiveController.deleteQuote', { id: spiritualQuote.id }) }}"><i id="delete_svg" class="fas fa-trash"></i></a>
+                <a class="edit_btn" href="{{ route('ArchiveController.editQuote', { id: spiritualQuote.id }) }}"><i id="edit_svg" class="fas fa-marker"></i></a>
+              </div>
+            @endif
+          </div>
+        @endeach
+      </div>
+      <form action="{{ route('ArchiveController.sendQuote') }}" method="POST">
+        {{ csrfField() }}
+    
+        <div class="textarea_content">
+          <script>
+            function autoheight(x) {
+              x.style.height = "5px";
+              x.style.height = (15+x.scrollHeight)+"px";
+            }
+          </script>
+          @if(hasErrorFor('spiritual_quote'))
+            <span>
+              {{ getErrorFor('spiritual_quote') }}
+            </span>
+          @endif
+          <div class="textarea_container">
+            <div class="textarea_wrapper">
+              <textarea 
+                id="textarea" 
+                name="spiritual_quote" 
+                onkeyup="autoheight(this)"
+                value="{{ old('spiritual_quote', '') }}"
+              ></textarea>
+              <button type="submit" class="send_btn"><i class="fas fa-share-square"></i></button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 @endsection
