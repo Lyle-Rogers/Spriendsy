@@ -70,10 +70,27 @@
   margin-top: 6px;
 }
 
+.error_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: -1em;
+}
+
+span {
+  font-family: 'Rubik', sans-serif;
+  font-size: 21px;
+  padding: 22px;
+  background-color: rgb(255, 217, 0);
+  max-width: 22em;
+  width: 22em;
+  text-align: center;
+}
+
 .textarea_container {
   position: fixed;
   bottom: 0;
-  left: 27%;
+  left: 29.3%;
 }
 
 .textarea_wrapper {

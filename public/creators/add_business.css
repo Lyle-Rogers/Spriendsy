@@ -16,6 +16,23 @@
   width: 40em;
 }
 
+.error_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+span {
+  font-family: 'Rubik', sans-serif;
+  font-size: 21px;
+  padding: 22px;
+  background-color: rgb(255, 217, 0);
+  max-width: 22em;
+  width: 22em;
+  text-align: center;
+  margin-right: 28px;
+}
+
 .text {
   width: 38em;
   font-size: 25px;

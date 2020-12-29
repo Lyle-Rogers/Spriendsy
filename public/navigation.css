@@ -17,6 +17,30 @@ header {
   border-radius: 0px 0px 40px 40px; 
 }
 
+.header {
+  background-image: url("../images/oueXY8.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 1px;
+  border-radius: 0px 0px 40px 40px; 
+  height: 23em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spriendsy-logo-not-logged-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  font-family: 'Metal Mania', cursive;
+  letter-spacing: 5px;
+  text-decoration: none;
+  color: black;
+}
+
 .user-status-profile-btn-container {
   display: flex;
   align-items: center;

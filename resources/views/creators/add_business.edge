@@ -27,9 +27,11 @@
           value="{{ old('business_name', '') }}"
         >
       </div>
-      @if(hasErrorFor('business_name'))
-        <span class="business_name_error">{{ getErrorFor('business_name') }}</span>
-      @endif
+      <div class="error_content">
+        @if(hasErrorFor('business_name'))
+          <span class="business_name_error">{{ getErrorFor('business_name') }}</span>
+        @endif
+      </div>
     </div>
     <div class="business_description_content">
       <label class="description_label" for="description">Business Description</label>
@@ -38,9 +40,11 @@
         name="description" 
         value="{{ old('description', '') }}"
       ></textarea>
-      @if(hasErrorFor('description'))
-        <span class="description_error">{{ getErrorFor('description') }}</span>
-      @endif
+      <div class="error_content">
+        @if(hasErrorFor('description'))
+          <span class="description_error">{{ getErrorFor('description') }}</span>
+        @endif
+      </div>
     </div>
     <div class="post_btn_content">
       <button class="post_btn" type="submit">

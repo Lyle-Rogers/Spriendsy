@@ -122,43 +122,70 @@
             <div class="quote_container">
               <p class="quote">{{ spiritualQuote.quote }}</p>
             </div>
-            @if(spiritualQuote.user_id === userId)
-              <div class="delete-edit-btns-content">
-                <a class="delete_btn" href="{{ route('ArchiveController.deleteQuote', { id: spiritualQuote.id }) }}"><i id="delete_svg" class="fas fa-trash"></i></a>
-                <a class="edit_btn" href="{{ route('ArchiveController.editQuote', { id: spiritualQuote.id }) }}"><i id="edit_svg" class="fas fa-marker"></i></a>
-              </div>
-            @endif
+            <div class="delete_edit_btns_content">
+              @if(spiritualQuote.user_id === theId)
+                <div class="delete_edit_btns_container">
+                  <a class="delete_btn" href="{{ route('ArchiveController.deleteQuote', { id: spiritualQuote.id }) }}"><i id="delete_svg" class="fas fa-trash"></i></a>
+                  <a class="edit_btn" href="{{ route('ArchiveController.editQuote', { id: spiritualQuote.id }) }}"><i id="edit_svg" class="fas fa-marker"></i></a>
+                </div>
+              @endif
+            </div>
           </div>
         @endeach
       </div>
-      <form action="{{ route('ArchiveController.sendQuote') }}" method="POST">
-        {{ csrfField() }}
-    
-        <div class="textarea_content">
-          <script>
-            function autoheight(x) {
-              x.style.height = "5px";
-              x.style.height = (15+x.scrollHeight)+"px";
-            }
-          </script>
-          @if(hasErrorFor('spiritual_quote'))
-            <span>
-              {{ getErrorFor('spiritual_quote') }}
-            </span>
-          @endif
-          <div class="textarea_container">
-            <div class="textarea_wrapper">
-              <textarea 
-                id="textarea" 
-                name="spiritual_quote" 
-                onkeyup="autoheight(this)"
-                value="{{ old('spiritual_quote', '') }}"
-              ></textarea>
-              <button type="submit" class="send_btn"><i class="fas fa-share-square"></i></button>
+      @if(editMode === true)
+        <form action="{{ route('ArchiveController.updateQuote') }}" method="POST">
+          {{ csrfField() }}
+      
+          <div class="textarea_content">
+            <div class="error_content">
+              @if(hasErrorFor('spiritual_quote'))
+                <span>
+                  {{ getErrorFor('spiritual_quote') }}
+                </span>
+              @endif
+            </div>
+            <div class="textarea_container">
+              <div class="textarea_wrapper">
+                <textarea 
+                  id="textarea_2" 
+                  name="spiritual_quote" 
+                >{{ quoteBeingEdited.quote }}</textarea>
+                <button type="submit" class="send_btn"><i class="fas fa-share-square"></i></button>
+              </div>
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      @else
+        <form action="{{ route('ArchiveController.sendQuote') }}" method="POST">
+          {{ csrfField() }}
+      
+          <div class="textarea_content">
+            <script>
+              function autoheight(x) {
+                x.style.height = "5px";
+                x.style.height = (15+x.scrollHeight)+"px";
+              }
+            </script>
+            @if(hasErrorFor('spiritual_quote'))
+              <span>
+                {{ getErrorFor('spiritual_quote') }}
+              </span>
+            @endif
+            <div class="textarea_container">
+              <div class="textarea_wrapper">
+                <textarea 
+                  id="textarea" 
+                  name="spiritual_quote" 
+                  onkeyup="autoheight(this)"
+                  value="{{ old('spiritual_quote', '') }}"
+                ></textarea>
+                <button type="submit" class="send_btn"><i class="fas fa-share-square"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      @endif
     </div>
   </div>
 @endsection

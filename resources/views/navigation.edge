@@ -25,6 +25,7 @@
   @!section('extracss')
 </head>
 <body>
+  @loggedIn
   <header>
     <div class="user-status-profile-btn-container">
       <div class="user-status">
@@ -60,7 +61,14 @@
       <a class="nav-3" href="/businesses">BUSINESS</a>
       <a class="nav-4" href="/archive">ARCHIVE</a>
     </nav>
-  </header> 
+  </header>
+  @else
+  <div class="header">
+    <div class="spriendsy-logo-not-logged-in">
+      <h1>Spriendsy</h1>
+    </div>
+  </div>
+  @endloggedIn
   <div class="content-container">
     @!section('content')
   </div> 

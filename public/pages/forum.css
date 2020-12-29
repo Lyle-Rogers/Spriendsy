@@ -51,6 +51,23 @@
   color: rgb(0, 153, 255);
 }
 
+.error_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+span {
+  font-family: 'Rubik', sans-serif;
+  font-size: 21px;
+  padding: 22px;
+  margin-top: -18px;
+  background-color: rgb(255, 217, 0);
+  max-width: 22em;
+  width: 22em;
+  text-align: center;
+}
+
 .forum_messages_wrapper {
   overflow-y: scroll;
   height: 125vw; 

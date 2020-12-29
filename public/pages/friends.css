@@ -70,11 +70,30 @@
   margin-left: 15px;
 }
 
-.textarea_content {
+.error_content {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+span {
+  font-family: 'Rubik', sans-serif;
+  font-size: 21px;
+  padding: 22px;
+  background-color: rgb(255, 217, 0);
+  max-width: 18em;
+  width: 18em;
+  text-align: center;
+}
+
+.textarea_content {
   position: fixed;
   bottom: 0;
-  left: 20.1%;
+  left: 23%;
+}
+
+.textarea_container {
+  display: flex;
 }
 
 @media (max-width:70em) {
@@ -120,7 +139,6 @@
   margin-left: 1px;
   color: rgb(0, 153, 255);
   margin-top: -10px;
-  background-color: white;
 }
 
 .friends_list_content {

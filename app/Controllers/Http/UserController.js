@@ -19,8 +19,9 @@ class UserController {
       await auth.login(user);
 
       const sendWelcomeMessage = await FriendMessages.create({
-        message: `Welcome to Spriendsy, ${ request.username }`,
-        user_messaged_id: user.id
+        message: `Welcome to Spriendsy, ${ request.input('username') }!`,
+        user_messaged_id: user.id,
+        user_id: 1
       })
   
       const newMessageNotifier = await NewMessage.create({

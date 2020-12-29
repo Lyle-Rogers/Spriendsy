@@ -30,11 +30,13 @@
         <button type="submit" class="send-btn"><i class="fas fa-share-square"></i></button>
       </div>
     </div>
-    @if(hasErrorFor('forum_message'))
-      <span>
-        {{ getErrorFor('forum_message') }}
-      </span>
-    @endif
+    <div class="error_content">
+      @if(hasErrorFor('forum_message'))
+        <span>
+          {{ getErrorFor('forum_message') }}
+        </span>
+      @endif
+    </div>
   </form>
   <div class="forum_messages_wrapper">
     @each(forumMessage in forumMessages)

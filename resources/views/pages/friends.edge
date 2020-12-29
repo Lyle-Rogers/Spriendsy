@@ -27,26 +27,30 @@
   
           <input type="hidden" name="user_messaged_id" value="{{ userMessagedId }}">
       
-          @if(hasErrorFor('friend_message'))
-            <span class="textarea_error">
-              {{ getErrorFor('friend_message') }}
-            </span>
-          @endif
           <div class="textarea_content">
-            <script>
-              function autoheight(x) {
-                x.style.height = "5px";
-                x.style.height = (15+x.scrollHeight)+"px";
-              }
-            </script>
-            <textarea 
-              id="textarea" 
-              name="friend_message" 
-              onkeyup="autoheight(this)"
-              value="{{ old('friend_message', '') }}"
-            ></textarea>
-            <div class="send_btn_container">
-              <button type="submit" class="send_btn"><i class="fas fa-share-square"></i></button>
+            <div class="error_content">
+              @if(hasErrorFor('friend_message'))
+                <span class="textarea_error">
+                  {{ getErrorFor('friend_message') }}
+                </span>
+              @endif
+            </div>
+            <div class="textarea_container">
+              <script>
+                function autoheight(x) {
+                  x.style.height = "5px";
+                  x.style.height = (15+x.scrollHeight)+"px";
+                }
+              </script>
+              <textarea 
+                id="textarea" 
+                name="friend_message" 
+                onkeyup="autoheight(this)"
+                value="{{ old('friend_message', '') }}"
+              ></textarea>
+              <div class="send_btn_container">
+                <button type="submit" class="send_btn"><i class="fas fa-share-square"></i></button>
+              </div>
             </div>
           </div>
         </form>

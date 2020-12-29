@@ -30,17 +30,14 @@
             x.style.height = (15+x.scrollHeight)+"px";
           }
         </script>
-        @if(hasErrorFor('forum_comment_message'))
-          <span>
-            {{ getErrorFor('forum_comment_message') }}
-          </span>
-        @endif
         <div class="textarea_container">
-          @if(hasErrorFor('forum_comment_message'))
-            <span>
-              {{ getErrorFor('forum_comment_message') }}
-            </span>
-          @endif
+          <div class="error_content">
+            @if(hasErrorFor('forum_comment_message'))
+              <span>
+                {{ getErrorFor('forum_comment_message') }}
+              </span>
+            @endif
+          </div>
           <div class="textarea_wrapper">
             <textarea 
               id="forum-comments-textarea" 

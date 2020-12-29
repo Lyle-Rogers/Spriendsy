@@ -39,11 +39,13 @@
           }
         </script>
         <div class="textarea_container">
-          @if(hasErrorFor('business_comment_message'))
-            <span>
-              {{ getErrorFor('business_comment_message') }}
-            </span>
-          @endif
+          <div class="error_content">
+            @if(hasErrorFor('business_comment_message'))
+              <span>
+                {{ getErrorFor('business_comment_message') }}
+              </span>
+            @endif
+          </div>
           <div class="textarea_wrapper">
             <textarea 
               id="business_comments_textarea" 
