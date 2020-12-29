@@ -47,6 +47,16 @@ class ArchiveController {
 
     return view.render('pages/archive', { quoteBeingEdited: quote, spiritualQuotes: spiritualQuotes.toJSON(), theId, editMode });
   }
+
+  async updateQuote({ response, request, params }) {
+    const spiritualQuote = await SpiritualQuote.find(params.id);
+
+    spiritualQuote.quote = request.all().spiritual_quote;
+
+    await spiritualQuote.save();
+
+    return response.redirect('/archive');
+  }
 }
 
 module.exports = ArchiveController

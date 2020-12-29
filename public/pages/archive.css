@@ -152,6 +152,27 @@
   padding: 50px;   
 }
 
+.the_kybalion {
+  background-image: url('../images/books/The\ Kybalion.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;   
+}
+
+.yoga_and_psychotherapy {
+  background-image: url('../images/books/41AoWXgX9-L._SY291_BO1\,204\,203\,200_QL40_.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;   
+}
+
+.as_a_man_thinketh {
+  background-image: url('../images/books/158509305X.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;   
+}
+
 .spiritual_quotes_name {
   display: flex;
   flex-direction: column;
@@ -240,6 +261,18 @@ span {
   width: 22em;
   text-align: center;
   margin-left: 5.7em;
+}
+
+.span_2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 21px;
+  padding: 22px;
+  background-color: rgb(255, 217, 0);
+  max-width: 22em;
+  width: 22em;
+  text-align: center;
+  margin-right: 5px;
+  margin-bottom: -1em;
 }
 
 @media (max-width:70em) {

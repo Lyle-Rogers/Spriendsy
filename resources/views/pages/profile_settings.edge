@@ -71,6 +71,13 @@
             value="{{ user.username }}"
           >
         </div>
+        <div class="error_content">
+          @if(hasErrorFor('username'))
+            <span>
+              {{ getErrorFor('username') }}
+            </span>
+          @endif
+        </div>
         <button class="save_btn" type="submit">
           <div class="save_btn_text">
             SAVE

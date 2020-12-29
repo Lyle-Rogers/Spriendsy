@@ -107,6 +107,24 @@
             <h6>The Prophet</h6>
           </a>
         </div>
+        <div class="books">
+          <a class="the_kybalion" href="https://www.pdfdrive.com/the-kybalion-a-study-of-the-hermetic-philosophy-of-ancient-egypt-and-greece-e58043063.html"></a>
+          <a class="book_titles" href="https://www.pdfdrive.com/the-kybalion-a-study-of-the-hermetic-philosophy-of-ancient-egypt-and-greece-e58043063.html">
+            <h6>The Kybalion: A Study of the Hermetic Philosophy</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="yoga_and_psychotherapy" href="https://www.pdfdrive.com/yoga-and-psychotherapy-the-evolution-of-consciousness-e196910575.html"></a>
+          <a class="book_titles" href="https://www.pdfdrive.com/yoga-and-psychotherapy-the-evolution-of-consciousness-e196910575.html">
+            <h6>Yoga and Psychotherapy: The Evolution of Consciousness</h6>
+          </a>
+        </div>
+        <div class="books">
+          <a class="as_a_man_thinketh" href="https://www.pdfdrive.com/as-a-man-thinketh-mobi-e194628463.html"></a>
+          <a class="book_titles" href="https://www.pdfdrive.com/as-a-man-thinketh-mobi-e194628463.html">
+            <h6>As a Man Thinketh</h6>
+          </a>
+        </div>
       </div>
     </div>
     <div class="spiritual_quotes_content">
@@ -134,15 +152,15 @@
         @endeach
       </div>
       @if(editMode === true)
-        <form action="{{ route('ArchiveController.updateQuote') }}" method="POST">
+        <form action="{{ route('ArchiveController.updateQuote', { id: quoteBeingEdited.id }) }}" method="POST">
           {{ csrfField() }}
       
           <div class="textarea_content">
             <div class="error_content">
               @if(hasErrorFor('spiritual_quote'))
-                <span>
+                <div class="span_2">
                   {{ getErrorFor('spiritual_quote') }}
-                </span>
+                </div>
               @endif
             </div>
             <div class="textarea_container">
