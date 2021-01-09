@@ -37,7 +37,7 @@
         class="business_description_textarea" 
         name="description" 
         value="{{ old('description', '') }}"
-    >{{ business.description }}</textarea>
+      >{{ business.description }}</textarea>
       @if(hasErrorFor('description'))
         <span class="description_error">{{ getErrorFor('description') }}</span>
       @endif
