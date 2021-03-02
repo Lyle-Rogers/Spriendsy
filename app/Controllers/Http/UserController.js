@@ -56,7 +56,7 @@ class UserController {
       } else {
         session.flash({ message: "Incorrect password." })
 
-      return response.redirect('back')
+        return response.redirect('back')
       }
     } 
     session.flash({ message: "Couldn't find your username. Please check to see if it's correct or contact me for help." })

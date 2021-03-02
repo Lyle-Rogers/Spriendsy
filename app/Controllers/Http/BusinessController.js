@@ -14,7 +14,8 @@ class BusinessController {
 
     return response.redirect('/businesses');
   }
-  async loadBusinesses({view, auth}) {
+
+  async loadBusinesses({ view, auth }) {
     const businesses = await Businesses
       .query()
       .orderBy('id', '1')
